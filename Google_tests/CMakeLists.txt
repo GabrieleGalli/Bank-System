@@ -12,6 +12,5 @@ include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 set(TEST_SOURCE_FILES runAllTests.cpp AccountManager_TEST.cpp)
 
 # 'Google_Tests_run' is the target name
-# 'test1.cpp tests2.cpp' are source files with tests
 add_executable(Google_Tests_run ${TEST_SOURCE_FILES})
 target_link_libraries(Google_Tests_run gtest gtest_main core)

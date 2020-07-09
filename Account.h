@@ -20,10 +20,14 @@ protected:
 
 public:
     Account() { _accountInfo.Clear(); }
+    virtual ~Account() { ClearTransactionsList(&_transactions); }
 
-    ACCOUNT_INFO &getAccountInfo();
-    TRANS_INFO   &getTransInfo();
-    std::list<TRANS_INFO *> &getTransactions();
+    ACCOUNT_INFO &getAccountInfo() { return _accountInfo; }
+    TRANS_INFO   *getTransInfo()   { return &_transInfo;  }
+    std::list<TRANS_INFO *> *getTransactions() { return &_transactions; }
+
+    double GetAmount();
+    static void ClearTransactionsList(std::list<TRANS_INFO* > *tlist);
 
 };
 

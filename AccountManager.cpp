@@ -11,7 +11,7 @@
 bool AccountManager::CreateNewAccount(const char *name, const char *surname, const char *fiscalCode,
                                       const char *city, const char *citizen, const char *pass) {
     auto *acc = new Account();
-    auto &ai = const_cast<ACCOUNT_INFO &>(acc->getAccountInfo());
+    auto &ai = acc->getAccountInfo();
 
     size_t len = sizeof(ai.Name);
     strncpy(ai.Name, name, len);
@@ -38,7 +38,6 @@ bool AccountManager::CreateNewAccount(const char *name, const char *surname, con
     ai.Password[len - 1] = '\0';
 
     ai.ID = GetNewID();
-    //ai.IBAN = GetNewIBAN();
 
     if (not _accounts.empty()) {
         // If accounts already exist, check that what needs to be created does not already exist.
@@ -65,13 +64,14 @@ bool AccountManager::CreateNewAccount(const char *name, const char *surname, con
 }
 //----------------------------------------------------------------------------------------------------------------------
 
-int AccountManager::ClearAccounts(std::list<Account *> alist) {
+int AccountManager::ClearAccounts(std::list<Account *> list) {
+    // Clears the list of accounts
     int nAcc = 0;
     for (;;) {
-        auto account = alist.back();
+        auto account = list.back();
         if (account == nullptr)
             break;
-        alist.remove(account);
+        list.remove(account);
         delete account;
         nAcc++;
     }
@@ -84,16 +84,52 @@ int AccountManager::ClearAccounts(std::list<Account *> alist) {
 //**********************************************************************************************************************
 // CHECK *
 //********
+//----------------------------------------------------------------------------------------------------------------------
+
 bool AccountManager::CheckValidAccount(const Account_struct &aStruct) {
+    // Ensures that two accounts with the same fiscal code cannot be created.
     bool isSuccess = true;
 
     for (auto account : _accounts) {
-        auto &ai = const_cast<ACCOUNT_INFO &>(account->getAccountInfo());
+        auto ai = account->getAccountInfo();
         if (strcmp(aStruct.FiscalCode, ai.FiscalCode) == 0) {
             std::cout << "CheckValidAccount::Equal Fiscal Codes" << std::endl;
             isSuccess = false;
             break;
         }
+    }
+    return isSuccess;
+}
+//----------------------------------------------------------------------------------------------------------------------
+
+bool AccountManager::CheckValidID(int ID) {
+    // Returns true if given ID already exists.
+    bool isSuccess = false;
+
+    for (auto account : _accounts) {
+        auto &ai = const_cast<ACCOUNT_INFO &>(account->getAccountInfo());
+        if (ai.ID == ID) {
+            std::cout << "CheckValidID::Existing ID" << std::endl;
+            isSuccess = true;
+            break;
+        }
+    }
+    return isSuccess;
+}
+//----------------------------------------------------------------------------------------------------------------------
+
+bool AccountManager::CheckValidPassword(int ID, const char *pass) {
+    // Returns true if the password given, associated with that ID, is correct.
+    bool isSuccess = false;
+
+    for (auto account : _accounts) {
+        auto &ai = account->getAccountInfo();
+        if (ai.ID == ID and strcmp(ai.Password, pass) == 0) {
+            std::cout << "CheckValidPassword::Correct ID and Password" << std::endl;
+            isSuccess = true;
+            break;
+        } else if (ai.ID == ID and strcmp(ai.Password, pass) != 0)
+            std::cout << "CheckValidPassword::Incorrect ID or Password" << std::endl;
     }
     return isSuccess;
 }
@@ -105,14 +141,44 @@ bool AccountManager::CheckValidAccount(const Account_struct &aStruct) {
 // GET *
 //******
 int AccountManager::GetNewID() {
-    // Ensures that the new account receives an unique ID
+    // Ensures that the new account receives an unique ID.
     int newID = GetNumAccounts() + 1;
     for (auto &account : _accounts) {
-        auto &ai = const_cast<ACCOUNT_INFO &>(account->getAccountInfo());
+        auto &ai = account->getAccountInfo();
         if (newID <= ai.ID)
             newID = ai.ID + 1;
     }
     return newID;
+}
+//----------------------------------------------------------------------------------------------------------------------
+
+const char* AccountManager::GetTransactionName(TRANS_CODE transCode) {
+    // Retrieve the transaction's code.
+    switch (transCode) {
+        case Deposit_code:
+            return "Deposit";
+        case Transfer_IN:
+            return "Transfer IN";
+        case Withdrawal_Code:
+            return "Withdrawal";
+        case Transfer_OUT:
+            return "Transfer OUT";
+        default:
+            return "Unknown operation";
+    }
+}
+//----------------------------------------------------------------------------------------------------------------------
+
+Account * AccountManager::GetAccount_FromID(int ID) {
+    // Retrieve an account by given ID.
+    for (auto account : _accounts) {
+        auto &ai =account->getAccountInfo();
+        if (ai.ID == ID)
+            return account;
+    }
+
+    std::cout << "GetAccount_FromID::This ID doesn't exist" << std::endl;
+    return nullptr;
 }
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -122,7 +188,7 @@ int AccountManager::GetNewID() {
 // LOAD FILE *
 //************
 bool AccountManager::LoadAccountsFromFile() {
-    // Returns true if Accounts file exists and it's successfully loaded -> exist some accounts
+    // Load accounts from Accounts.dat to accounts list. It must be done once.
 
     FILE *fp;
     bool exist = true;
@@ -156,6 +222,7 @@ bool AccountManager::LoadAccountsFromFile() {
 // WRITE TO FILE *
 //****************
 bool AccountManager::WriteAccountsToFile() {
+    // Store account details with other accounts.
     FILE *fp;
     bool isSuccess = true;
     fp = fopen("Accounts.dat", "wb");
@@ -178,6 +245,7 @@ bool AccountManager::WriteAccountsToFile() {
 // TRANSACTIONS *
 //***************
 void AccountManager::GenerateTransactionsFile(Account *account) {
+    // Creates the file on which the transactions are based.
     FILE *fp;
     fp = fopen(_transFileName, "wb");
     fclose(fp);
@@ -189,10 +257,30 @@ void AccountManager::GenerateTransactionsFile(Account *account) {
 //**********************************************************************************************************************
 // PRINT INFORMATION *
 //********************
-void AccountManager::PrintAccounts() {
+void AccountManager::PrintAccounts(bool printTrans) {
+    // Prints account details (ID, name, surname).
+    // If printTrans is set to true it also prints all account transactions.
     for (auto &account : _accounts) {
-        auto &ai = const_cast<ACCOUNT_INFO &>(account->getAccountInfo());
+        auto &ai = account->getAccountInfo();
         std::cout << "ID:" << ai.ID << " Name:" << ai.Name << " Surname:" << ai.Surname << std::endl;
+        if (printTrans)
+            PrintTransactions(ai.ID);
     }
+}
+//----------------------------------------------------------------------------------------------------------------------
+
+void AccountManager::PrintTransactions(int ID) {
+    // Prints all account (retrieved from ID) transactions.
+    auto acc = GetAccount_FromID(ID);
+    auto trs = acc->getTransactions();
+    int count = 1;
+    for (auto t : *trs) {
+        std::cout << "Transaction: " << count << std::endl
+                  << "Date: "   << t->Day << "/" << t->Month << "/" << t->Year << std::endl
+                  << "Amount: " << t->Amount << std::endl
+                  << "Code: "   << GetTransactionName(t->Code) << std::endl;
+        count++;
+    }
+    count = 0;
 }
 //----------------------------------------------------------------------------------------------------------------------

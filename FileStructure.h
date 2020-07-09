@@ -13,7 +13,7 @@ enum TRANS_CODE {
     Transfer_IN,
 
     // Out Codes
-    Withdrawal,
+    Withdrawal_Code,
     Transfer_OUT
 };
 

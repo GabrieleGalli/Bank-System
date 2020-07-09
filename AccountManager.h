@@ -11,23 +11,28 @@
 class AccountManager : public Account {
 private:
     std::list<Account *> _accounts;
-    std::list<TRANS_INFO* > _accTrans;
-    //std::map<std::list<TRANS_INFO>, Account *> _accountTransMAP;
     char _transFileName[150];
 
 public:
+
     // BASIC OPERATIONS
     bool CreateNewAccount(const char *name, const char *surname, const char* fiscalCode,
                           const char* city, const char* citizen, const char* pass);
-    static int  ClearAccounts(  std::list<Account *> alist);
-
+    static int ClearAccounts( std::list<Account *> list);
 
     // CHECK
     bool CheckValidAccount(const Account_struct& aStruct);
+    bool CheckValidID(int ID);
+    bool CheckValidPassword(int ID, const char* pass);
+    bool CheckValidID_Test(const int &ID);
+
 
     // GET
     int  GetNewID();
     int  GetNumAccounts() const { return _accounts.size(); }
+    std::list<Account *> GetAccounts() { return _accounts; }
+    static const char *GetTransactionName(TRANS_CODE transCode);
+    Account *GetAccount_FromID(int ID);
 
     // LOAD
     bool LoadAccountsFromFile();
@@ -37,7 +42,10 @@ public:
     // TRANSACTIONS
     void GenerateTransactionsFile(Account* account);
 
-    void PrintAccounts();
+    // PRINT INFORMATION
+    void PrintAccounts(bool printTrans);
+    void PrintTransactions(int ID);
+
 
 };
 
