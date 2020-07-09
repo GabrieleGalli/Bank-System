@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/gabri/CLionProjects/Bank-System/Account.cpp
+Account.h
+/home/gabri/CLionProjects/Bank-System/Account.h
+
+/home/gabri/CLionProjects/Bank-System/Account.h
+FileStructure.h
+/home/gabri/CLionProjects/Bank-System/FileStructure.h
+list
+-
+map
+-
+
+/home/gabri/CLionProjects/Bank-System/AccountManager.cpp
+iostream
+-
+AccountManager.h
+/home/gabri/CLionProjects/Bank-System/AccountManager.h
+
+/home/gabri/CLionProjects/Bank-System/AccountManager.h
+Account.h
+/home/gabri/CLionProjects/Bank-System/Account.h
+
+/home/gabri/CLionProjects/Bank-System/FileStructure.h
+cstring
+-
+
+/home/gabri/CLionProjects/Bank-System/main.cpp
+iostream
+-
+
