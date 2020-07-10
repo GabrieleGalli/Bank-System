@@ -18,7 +18,8 @@ public:
     // BASIC OPERATIONS
     bool CreateNewAccount(const char *name, const char *surname, const char* fiscalCode,
                           const char* city, const char* citizen, const char* pass);
-    static int ClearAccounts( std::list<Account *> list);
+    static void ClearAccounts(std::list<Account *> list);
+
 
     // CHECK
     bool CheckValidAccount(const Account_struct& aStruct);
@@ -30,17 +31,26 @@ public:
     // GET
     int  GetNewID();
     int  GetNumAccounts() const { return _accounts.size(); }
+    static void GetFileName(ACCOUNT_INFO &ai, char* fileName);
     std::list<Account *> GetAccounts() { return _accounts; }
     static const char *GetTransactionName(TRANS_CODE transCode);
     Account *GetAccount_FromID(int ID);
 
+
     // LOAD
     bool LoadAccountsFromFile();
+    bool LoadTransactionsFromFile(Account *account);
+    static bool LoadTransactionsFromFile(Account *account, char *fileName);
 
+
+    // WRITE
     bool WriteAccountsToFile();
+    static bool WriteTransactionToFile(const char *fileName, TRANS_INFO *transInfo);
+
 
     // TRANSACTIONS
     void GenerateTransactionsFile(Account* account);
+
 
     // PRINT INFORMATION
     void PrintAccounts(bool printTrans);

@@ -8,6 +8,8 @@
 //**********************************************************************************************************************
 // BASIC OPERATIONS *
 //*******************
+//----------------------------------------------------------------------------------------------------------------------
+
 bool AccountManager::CreateNewAccount(const char *name, const char *surname, const char *fiscalCode,
                                       const char *city, const char *citizen, const char *pass) {
     auto *acc = new Account();
@@ -64,18 +66,15 @@ bool AccountManager::CreateNewAccount(const char *name, const char *surname, con
 }
 //----------------------------------------------------------------------------------------------------------------------
 
-int AccountManager::ClearAccounts(std::list<Account *> list) {
+void AccountManager::ClearAccounts(std::list<Account *> list) {
     // Clears the list of accounts
-    int nAcc = 0;
     for (;;) {
         auto account = list.back();
         if (account == nullptr)
             break;
         list.remove(account);
         delete account;
-        nAcc++;
     }
-    return nAcc;
 }
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -140,6 +139,8 @@ bool AccountManager::CheckValidPassword(int ID, const char *pass) {
 //**********************************************************************************************************************
 // GET *
 //******
+//----------------------------------------------------------------------------------------------------------------------
+
 int AccountManager::GetNewID() {
     // Ensures that the new account receives an unique ID.
     int newID = GetNumAccounts() + 1;
@@ -149,6 +150,11 @@ int AccountManager::GetNewID() {
             newID = ai.ID + 1;
     }
     return newID;
+}
+//----------------------------------------------------------------------------------------------------------------------
+
+void AccountManager::GetFileName(ACCOUNT_INFO &ai, char* fileName) {
+    sprintf(fileName, "%s%s%s.bin", ai.Name, ai.Surname, ai.FiscalCode);
 }
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -172,7 +178,7 @@ const char* AccountManager::GetTransactionName(TRANS_CODE transCode) {
 Account * AccountManager::GetAccount_FromID(int ID) {
     // Retrieve an account by given ID.
     for (auto account : _accounts) {
-        auto &ai =account->getAccountInfo();
+        auto &ai = account->getAccountInfo();
         if (ai.ID == ID)
             return account;
     }
@@ -185,8 +191,8 @@ Account * AccountManager::GetAccount_FromID(int ID) {
 
 
 //**********************************************************************************************************************
-// LOAD FILE *
-//************
+// LOAD *
+//*******
 bool AccountManager::LoadAccountsFromFile() {
     // Load accounts from Accounts.dat to accounts list. It must be done once.
 
@@ -216,6 +222,48 @@ bool AccountManager::LoadAccountsFromFile() {
 }
 //----------------------------------------------------------------------------------------------------------------------
 
+bool AccountManager::LoadTransactionsFromFile(Account *account) {
+    char fileName[150];
+    auto info = account->getAccountInfo();
+    GetFileName(info, fileName);
+    return LoadTransactionsFromFile(account, fileName);
+}
+//----------------------------------------------------------------------------------------------------------------------
+
+bool AccountManager::LoadTransactionsFromFile(Account *account, char *fileName) {
+
+    FILE *fp;
+
+    auto tr_list = account->getTransactions();
+    Account::ClearTransactionsList(tr_list);
+
+    fp = fopen(fileName, "rb");
+    if (fp == nullptr) {
+        return true;
+    }
+
+    double amount = 0;
+
+    TRANS_INFO transInfo;
+    for (;;) {
+        size_t len = fread(&transInfo, 1, sizeof(TRANS_INFO), fp);
+        if (len != sizeof(TRANS_INFO))
+            break;
+
+        auto *pti = new(TRANS_INFO);
+        *pti = transInfo;
+        amount += transInfo.Amount;
+        tr_list->push_back(pti);
+    }
+
+    auto &acc_Ainfo = account->getAccountInfo();
+    acc_Ainfo.Amount = amount;
+
+    fclose(fp);
+    return true;
+}
+//----------------------------------------------------------------------------------------------------------------------
+
 
 
 //**********************************************************************************************************************
@@ -237,7 +285,22 @@ bool AccountManager::WriteAccountsToFile() {
     fclose(fp);
     return isSuccess;
 }
-//-----------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------
+
+bool AccountManager::WriteTransactionToFile(const char *fileName, TRANS_INFO *transInfo) {
+    FILE *fp;
+    bool isSuccess = true;
+
+    fp = fopen(fileName, "ab");
+    if (fp == nullptr)
+        return false;
+    if (fwrite(transInfo, sizeof(TRANS_INFO), 1, fp) == 1)
+        isSuccess = true;
+
+    fclose(fp);
+    return isSuccess;
+}
+//----------------------------------------------------------------------------------------------------------------------
 
 
 

@@ -23,11 +23,12 @@ bool AccountManager::CheckValidID_Test(const int &ID) {
     return isSuccess;
 }
 
+
 TEST(AccountManager, Test_AccountCreation) {
     // Test if a new account has been added
     auto list = am.GetAccounts();
     int size = list.size();
-    am.CreateNewAccount("nameTry", "surnameTry", "17894Try", "cityTry", "citizenTry", "passTry");
+    am.CreateNewAccount("n1", "s1", "f1", "c1", "ct1", "p1");
     createdAccounts++;
     auto newList = am.GetAccounts();
     int  newSize = newList.size();
@@ -36,22 +37,20 @@ TEST(AccountManager, Test_AccountCreation) {
 
 TEST(AccountManager, Test_ClearAccounts) {
     // Test if ClearAccounts actually deletes the list of accounts
-    am.CreateNewAccount("nameTry1", "surnameTry1", "17894Try1", "cityTry1", "citizenTry1", "passTry1");
+    am.CreateNewAccount("n2", "s2", "f2", "c2", "ct2", "p2");
     createdAccounts++;
     auto list = am.GetAccounts();
     int  size = list.size();
     AccountManager::ClearAccounts(list);
-    auto newList = am.GetAccounts();
-    int  newSize = newList.size();
+    int newSize = list.size();
     ASSERT_EQ(0, newSize);
-
 }
 
 TEST(AccountManager, Test_CheckValidID) {
     // Test if find the right id for all existing accounts
-    am.CreateNewAccount("nameTry", "surnameTry", "17894Try", "cityTry", "citizenTry", "passTry");
+    am.CreateNewAccount("n3", "s3", "f3", "c3", "ct3", "p3");
     createdAccounts++;
-    am.CreateNewAccount("nameTry1", "surnameTry1", "17894Try1", "cityTry1", "citizenTry1", "passTry1");
+    am.CreateNewAccount("n4", "s4", "f4", "c4", "ct4", "p4");
     createdAccounts++;
     auto list = am.GetAccounts();
     int size = list.size();
@@ -60,4 +59,13 @@ TEST(AccountManager, Test_CheckValidID) {
     for (int ii = createdAccounts - 2; ii <= createdAccounts; ++ii)
         ASSERT_TRUE(am.CheckValidID_Test(ii));
 
+}
+
+TEST(AccountManager, Test_GetFileName_FromID) {
+    // ID must be 5
+    am.CreateNewAccount("n5", "s5", "f5", "c5", "ct5", "p5");
+    char fileName[150] = "";
+    auto account = am.GetAccount_FromID(4);
+    AccountManager::GetFileName(reinterpret_cast<ACCOUNT_INFO &>(account), fileName);
+    ASSERT_EQ("n5s5f5", fileName);
 }
