@@ -16,22 +16,22 @@ private:
 public:
 
     // BASIC OPERATIONS
-    bool CreateNewAccount(const char *name, const char *surname, const char* fiscalCode,
-                          const char* city, const char* citizen, const char* pass);
+    bool CreateNewAccount(const char *name, const char *surname, const char *fiscalCode,
+                          const char *city, const char *citizen, const char *pass);
     static void ClearAccounts(std::list<Account *> list);
 
 
     // CHECK
-    bool CheckValidAccount(const Account_struct& aStruct);
+    bool CheckValidAccount(const Account_struct &aStruct);
     bool CheckValidID(int ID);
-    bool CheckValidPassword(int ID, const char* pass);
+    bool CheckValidPassword(int ID, const char *pass);
     bool CheckValidID_Test(const int &ID);
 
 
     // GET
-    int  GetNewID();
-    int  GetNumAccounts() const { return _accounts.size(); }
-    static void GetFileName(ACCOUNT_INFO &ai, char* fileName);
+    int GetNewID();
+    int GetNumAccounts() const { return _accounts.size(); }
+    static void GetFileName(ACCOUNT_INFO &ai, char *fileName);
     std::list<Account *> GetAccounts() { return _accounts; }
     static const char *GetTransactionName(TRANS_CODE transCode);
     Account *GetAccount_FromID(int ID);
@@ -56,12 +56,11 @@ public:
     bool Deposit(int ID, double amount, int day, int month, int year);
     static bool Deposit(Account *account, double amount, int day, int month, int year);
     bool Withdrawal(int ID, double amount, int day, int month, int year);
-    bool Withdrawal(Account *account, double amount, int day, int month, int year);
+    static bool Withdrawal(Account *account, double amount, int day, int month, int year);
 
     // PRINT INFORMATION
     void PrintAccounts(bool printTrans);
     void PrintTransactions(int ID);
-
 
 };
 

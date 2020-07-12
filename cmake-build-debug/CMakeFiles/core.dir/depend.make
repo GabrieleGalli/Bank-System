@@ -10,8 +10,16 @@ CMakeFiles/core.dir/AccountManager.cpp.o: ../AccountManager.cpp
 CMakeFiles/core.dir/AccountManager.cpp.o: ../AccountManager.h
 CMakeFiles/core.dir/AccountManager.cpp.o: ../FileStructure.h
 
+CMakeFiles/core.dir/View.cpp.o: ../Account.h
+CMakeFiles/core.dir/View.cpp.o: ../AccountManager.h
+CMakeFiles/core.dir/View.cpp.o: ../FileStructure.h
+CMakeFiles/core.dir/View.cpp.o: ../TransactionDate.h
+CMakeFiles/core.dir/View.cpp.o: ../View.cpp
+CMakeFiles/core.dir/View.cpp.o: ../View.h
+
 CMakeFiles/core.dir/main.cpp.o: ../Account.h
 CMakeFiles/core.dir/main.cpp.o: ../AccountManager.h
 CMakeFiles/core.dir/main.cpp.o: ../FileStructure.h
+CMakeFiles/core.dir/main.cpp.o: ../View.h
 CMakeFiles/core.dir/main.cpp.o: ../main.cpp
 

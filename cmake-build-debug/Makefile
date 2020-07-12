@@ -307,6 +307,36 @@ AccountManager.cpp.s:
 	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/AccountManager.cpp.s
 .PHONY : AccountManager.cpp.s
 
+View.o: View.cpp.o
+
+.PHONY : View.o
+
+# target to build an object file
+View.cpp.o:
+	$(MAKE) -f CMakeFiles/Bank_System.dir/build.make CMakeFiles/Bank_System.dir/View.cpp.o
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/View.cpp.o
+.PHONY : View.cpp.o
+
+View.i: View.cpp.i
+
+.PHONY : View.i
+
+# target to preprocess a source file
+View.cpp.i:
+	$(MAKE) -f CMakeFiles/Bank_System.dir/build.make CMakeFiles/Bank_System.dir/View.cpp.i
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/View.cpp.i
+.PHONY : View.cpp.i
+
+View.s: View.cpp.s
+
+.PHONY : View.s
+
+# target to generate assembly for a file
+View.cpp.s:
+	$(MAKE) -f CMakeFiles/Bank_System.dir/build.make CMakeFiles/Bank_System.dir/View.cpp.s
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/View.cpp.s
+.PHONY : View.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -362,6 +392,9 @@ help:
 	@echo "... AccountManager.o"
 	@echo "... AccountManager.i"
 	@echo "... AccountManager.s"
+	@echo "... View.o"
+	@echo "... View.i"
+	@echo "... View.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

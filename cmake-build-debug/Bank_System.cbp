@@ -456,6 +456,18 @@
 		<Unit filename="/home/gabri/CLionProjects/Bank-System/Google_tests/runAllTests.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>
+		<Unit filename="/home/gabri/CLionProjects/Bank-System/TransactionDate.h">
+			<Option target="Bank_System"/>
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/gabri/CLionProjects/Bank-System/View.cpp">
+			<Option target="Bank_System"/>
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/gabri/CLionProjects/Bank-System/View.h">
+			<Option target="Bank_System"/>
+			<Option target="core"/>
+		</Unit>
 		<Unit filename="/home/gabri/CLionProjects/Bank-System/main.cpp">
 			<Option target="Bank_System"/>
 			<Option target="core"/>

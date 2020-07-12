@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/gabri/CLionProjects/Bank-System/Account.cpp" "/home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles/Bank_System.dir/Account.cpp.o"
   "/home/gabri/CLionProjects/Bank-System/AccountManager.cpp" "/home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles/Bank_System.dir/AccountManager.cpp.o"
+  "/home/gabri/CLionProjects/Bank-System/View.cpp" "/home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles/Bank_System.dir/View.cpp.o"
   "/home/gabri/CLionProjects/Bank-System/main.cpp" "/home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles/Bank_System.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

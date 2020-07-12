@@ -28,9 +28,19 @@ Account.h
 cstring
 -
 
-/home/gabri/CLionProjects/Bank-System/main.cpp
+/home/gabri/CLionProjects/Bank-System/TransactionDate.h
+ctime
+-
+
+/home/gabri/CLionProjects/Bank-System/View.cpp
+View.h
+/home/gabri/CLionProjects/Bank-System/View.h
+TransactionDate.h
+/home/gabri/CLionProjects/Bank-System/TransactionDate.h
 iostream
 -
+
+/home/gabri/CLionProjects/Bank-System/View.h
 AccountManager.h
 /home/gabri/CLionProjects/Bank-System/AccountManager.h
 

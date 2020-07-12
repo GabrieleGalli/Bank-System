@@ -96,11 +96,25 @@ CMakeFiles/core.dir/AccountManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/AccountManager.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabri/CLionProjects/Bank-System/AccountManager.cpp -o CMakeFiles/core.dir/AccountManager.cpp.s
 
+CMakeFiles/core.dir/View.cpp.o: CMakeFiles/core.dir/flags.make
+CMakeFiles/core.dir/View.cpp.o: ../View.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/core.dir/View.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/View.cpp.o -c /home/gabri/CLionProjects/Bank-System/View.cpp
+
+CMakeFiles/core.dir/View.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/View.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabri/CLionProjects/Bank-System/View.cpp > CMakeFiles/core.dir/View.cpp.i
+
+CMakeFiles/core.dir/View.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/View.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabri/CLionProjects/Bank-System/View.cpp -o CMakeFiles/core.dir/View.cpp.s
+
 # Object files for target core
 core_OBJECTS = \
 "CMakeFiles/core.dir/main.cpp.o" \
 "CMakeFiles/core.dir/Account.cpp.o" \
-"CMakeFiles/core.dir/AccountManager.cpp.o"
+"CMakeFiles/core.dir/AccountManager.cpp.o" \
+"CMakeFiles/core.dir/View.cpp.o"
 
 # External object files for target core
 core_EXTERNAL_OBJECTS =
@@ -108,9 +122,10 @@ core_EXTERNAL_OBJECTS =
 libcore.a: CMakeFiles/core.dir/main.cpp.o
 libcore.a: CMakeFiles/core.dir/Account.cpp.o
 libcore.a: CMakeFiles/core.dir/AccountManager.cpp.o
+libcore.a: CMakeFiles/core.dir/View.cpp.o
 libcore.a: CMakeFiles/core.dir/build.make
 libcore.a: CMakeFiles/core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libcore.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libcore.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/core.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/core.dir/link.txt --verbose=$(VERBOSE)
 

@@ -481,7 +481,6 @@ bool AccountManager::Withdrawal(int ID, double amount, int day, int month, int y
         *ptri = transInfo;
         std::cout << amount << " withdrawn from your account." << std::endl;
         trs->push_back(ptri);
-        std::cout << trs->size() << std::endl;
         auto &acc_Ainfo = account->getAccountInfo();
         acc_Ainfo.Amount -= amount;
         return true;
@@ -518,7 +517,6 @@ bool AccountManager::Withdrawal(Account *account, double amount, int day, int mo
         *ptri = transInfo;
         std::cout << amount << " withdrawn from your account." << std::endl;
         trs->push_back(ptri);
-        std::cout << trs->size() << std::endl;
         auto &acc_Ainfo = account->getAccountInfo();
         acc_Ainfo.Amount -= amount;
         return true;
@@ -555,7 +553,7 @@ void AccountManager::PrintTransactions(int ID) {
         std::cout << "Transaction: " << count << std::endl
                   << "Date: "   << t->Day << "/" << t->Month << "/" << t->Year << std::endl
                   << "Amount: " << t->Amount << std::endl
-                  << "Code: "   << GetTransactionName(t->Code) << std::endl;
+                  << "Code: "   << GetTransactionName(t->Code) << std::endl << std::endl;
         count++;
     }
     count = 0;

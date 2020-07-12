@@ -10,8 +10,16 @@ CMakeFiles/Bank_System.dir/AccountManager.cpp.o: ../AccountManager.cpp
 CMakeFiles/Bank_System.dir/AccountManager.cpp.o: ../AccountManager.h
 CMakeFiles/Bank_System.dir/AccountManager.cpp.o: ../FileStructure.h
 
+CMakeFiles/Bank_System.dir/View.cpp.o: ../Account.h
+CMakeFiles/Bank_System.dir/View.cpp.o: ../AccountManager.h
+CMakeFiles/Bank_System.dir/View.cpp.o: ../FileStructure.h
+CMakeFiles/Bank_System.dir/View.cpp.o: ../TransactionDate.h
+CMakeFiles/Bank_System.dir/View.cpp.o: ../View.cpp
+CMakeFiles/Bank_System.dir/View.cpp.o: ../View.h
+
 CMakeFiles/Bank_System.dir/main.cpp.o: ../Account.h
 CMakeFiles/Bank_System.dir/main.cpp.o: ../AccountManager.h
 CMakeFiles/Bank_System.dir/main.cpp.o: ../FileStructure.h
+CMakeFiles/Bank_System.dir/main.cpp.o: ../View.h
 CMakeFiles/Bank_System.dir/main.cpp.o: ../main.cpp
 

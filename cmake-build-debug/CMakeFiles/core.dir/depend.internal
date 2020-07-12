@@ -10,8 +10,16 @@ CMakeFiles/core.dir/AccountManager.cpp.o
  /home/gabri/CLionProjects/Bank-System/AccountManager.cpp
  /home/gabri/CLionProjects/Bank-System/AccountManager.h
  /home/gabri/CLionProjects/Bank-System/FileStructure.h
+CMakeFiles/core.dir/View.cpp.o
+ /home/gabri/CLionProjects/Bank-System/Account.h
+ /home/gabri/CLionProjects/Bank-System/AccountManager.h
+ /home/gabri/CLionProjects/Bank-System/FileStructure.h
+ /home/gabri/CLionProjects/Bank-System/TransactionDate.h
+ /home/gabri/CLionProjects/Bank-System/View.cpp
+ /home/gabri/CLionProjects/Bank-System/View.h
 CMakeFiles/core.dir/main.cpp.o
  /home/gabri/CLionProjects/Bank-System/Account.h
  /home/gabri/CLionProjects/Bank-System/AccountManager.h
  /home/gabri/CLionProjects/Bank-System/FileStructure.h
+ /home/gabri/CLionProjects/Bank-System/View.h
  /home/gabri/CLionProjects/Bank-System/main.cpp
