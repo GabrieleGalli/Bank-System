@@ -1,0 +1,43 @@
+AccountManager am;
+
+    if (not am.LoadAccountsFromFile()) {
+        std::cout << "Creating new accounts..." << std::endl;
+        am.CreateNewAccount("Andrea",   "Catania", "1234", "Livorno", "Italiana", "abcd");
+        am.CreateNewAccount("Gabriele", "Galli",   "555",  "Prato",   "Italiana", "efgh");
+        am.CreateNewAccount("Eleonora", "Spina",   "4567", "Firenze", "Italiana", "ilmn");
+    }
+    else std::cout << "Loaded Accounts::" << am.GetNumAccounts() << std::endl;
+    am.PrintAccounts(true);
+
+    am.Deposit(2, 1000, 7,7,2020);
+    am.MakeInternalTransaction(2, 1, 6, 7, 2020, 10);
+    am.MakeInternalTransaction(2, 1, 6, 7, 2020, 20);
+    am.MakeInternalTransaction(2, 3, 6, 7, 2020, 30);
+
+    std::cout << "1 ------------------------" << std::endl;
+    am.PrintAccounts(true);
+
+    std::cout << "2 ------------------------" << std::endl;
+    am.PrintTransactions(2);
+
+    std::cout << "3 ------------------------" << std::endl;
+    // It mustn't possible to create two accounts with the same fiscal code
+    am.CreateNewAccount("Pietro", "Sarti", "1234", "Palermo", "Italiana", "abcd");
+
+    std::cout << "4 ------------------------" << std::endl;
+    // This account mustn't exist
+    am.GetAccount_FromID(8989);
+
+    std::cout << "5 ------------------------" << std::endl;
+    //Add a transaction "Deposit" to account with =ID
+    am.Deposit(2, 100, 7,7,2020);
+
+    std::cout << "6 ------------------------" << std::endl;
+    //TRY Transactions between two accounts
+    am.MakeInternalTransaction(2, 1, 6, 7, 2020, 10);
+
+    std::cout << "7 ------------------------" << std::endl;
+    am.PrintTransactions(2);
+
+    std::cout << "8 ------------------------" << std::endl;
+    am.PrintTransactions(1);

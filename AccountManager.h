@@ -11,7 +11,7 @@
 class AccountManager : public Account {
 private:
     std::list<Account *> _accounts;
-    char _transFileName[150];
+    char _transFileName[FILENAME_MAXLEN];
 
 public:
 
@@ -39,18 +39,24 @@ public:
 
     // LOAD
     bool LoadAccountsFromFile();
-    bool LoadTransactionsFromFile(Account *account);
+    static bool LoadTransactionsFromFile(Account *account);
     static bool LoadTransactionsFromFile(Account *account, char *fileName);
 
 
     // WRITE
-    bool WriteAccountsToFile();
+    static bool WriteAccountToFile(Account *account);
     static bool WriteTransactionToFile(const char *fileName, TRANS_INFO *transInfo);
 
 
     // TRANSACTIONS
-    void GenerateTransactionsFile(Account* account);
+    void GenerateTransactionsFile(Account *account);
 
+    //crded
+    bool MakeInternalTransaction(int fromID, int toID, int day, int month, int year, double amount);
+    bool Deposit(int ID, double amount, int day, int month, int year);
+    static bool Deposit(Account *account, double amount, int day, int month, int year);
+    bool Withdrawal(int ID, double amount, int day, int month, int year);
+    bool Withdrawal(Account *account, double amount, int day, int month, int year);
 
     // PRINT INFORMATION
     void PrintAccounts(bool printTrans);

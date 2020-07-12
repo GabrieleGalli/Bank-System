@@ -46,22 +46,25 @@ bool AccountManager::CreateNewAccount(const char *name, const char *surname, con
         if (CheckValidAccount(ai)) {
             // If the account doesn't exist, create it.
             _accounts.push_back(acc);
-            std::cout << "CreateNewAccount::Pushed Account - Account Num: " << _accounts.size() << std::endl;
             sprintf(_transFileName, "%s%s%s.bin", name, surname, fiscalCode);
-            GenerateTransactionsFile(acc);
-            return true;
         } else {
             // The account already exists.
-            std::cout << "CreateNewAccount::This account already exists. Retry." << std::endl;
+            std::cout << "Impossible to create this account. Retry." << std::endl;
             delete acc;
             return false;
         }
     } else {
         _accounts.push_back(acc);
-        std::cout << "CreateNewAccount::Pushed Account - Account Num: " << _accounts.size() << std::endl;
         sprintf(_transFileName, "%s%s%s.bin", name, surname, fiscalCode);
+    }
+
+    if (WriteAccountToFile(acc)) {
         GenerateTransactionsFile(acc);
+        std::cout << "Your new ID is: " << ai.ID << std::endl;
         return true;
+    } else {
+        delete acc;
+        return false;
     }
 }
 //----------------------------------------------------------------------------------------------------------------------
@@ -86,13 +89,11 @@ void AccountManager::ClearAccounts(std::list<Account *> list) {
 //----------------------------------------------------------------------------------------------------------------------
 
 bool AccountManager::CheckValidAccount(const Account_struct &aStruct) {
-    // Ensures that two accounts with the same fiscal code cannot be created.
     bool isSuccess = true;
 
     for (auto account : _accounts) {
-        auto ai = account->getAccountInfo();
+        auto &ai = account->getAccountInfo();
         if (strcmp(aStruct.FiscalCode, ai.FiscalCode) == 0) {
-            std::cout << "CheckValidAccount::Equal Fiscal Codes" << std::endl;
             isSuccess = false;
             break;
         }
@@ -106,9 +107,8 @@ bool AccountManager::CheckValidID(int ID) {
     bool isSuccess = false;
 
     for (auto account : _accounts) {
-        auto &ai = const_cast<ACCOUNT_INFO &>(account->getAccountInfo());
+        auto &ai = account->getAccountInfo();
         if (ai.ID == ID) {
-            std::cout << "CheckValidID::Existing ID" << std::endl;
             isSuccess = true;
             break;
         }
@@ -124,11 +124,9 @@ bool AccountManager::CheckValidPassword(int ID, const char *pass) {
     for (auto account : _accounts) {
         auto &ai = account->getAccountInfo();
         if (ai.ID == ID and strcmp(ai.Password, pass) == 0) {
-            std::cout << "CheckValidPassword::Correct ID and Password" << std::endl;
             isSuccess = true;
             break;
-        } else if (ai.ID == ID and strcmp(ai.Password, pass) != 0)
-            std::cout << "CheckValidPassword::Incorrect ID or Password" << std::endl;
+        }
     }
     return isSuccess;
 }
@@ -153,12 +151,12 @@ int AccountManager::GetNewID() {
 }
 //----------------------------------------------------------------------------------------------------------------------
 
-void AccountManager::GetFileName(ACCOUNT_INFO &ai, char* fileName) {
+void AccountManager::GetFileName(ACCOUNT_INFO &ai, char *fileName) {
     sprintf(fileName, "%s%s%s.bin", ai.Name, ai.Surname, ai.FiscalCode);
 }
 //----------------------------------------------------------------------------------------------------------------------
 
-const char* AccountManager::GetTransactionName(TRANS_CODE transCode) {
+const char *AccountManager::GetTransactionName(TRANS_CODE transCode) {
     // Retrieve the transaction's code.
     switch (transCode) {
         case Deposit_code:
@@ -175,15 +173,13 @@ const char* AccountManager::GetTransactionName(TRANS_CODE transCode) {
 }
 //----------------------------------------------------------------------------------------------------------------------
 
-Account * AccountManager::GetAccount_FromID(int ID) {
+Account *AccountManager::GetAccount_FromID(int ID) {
     // Retrieve an account by given ID.
     for (auto account : _accounts) {
         auto &ai = account->getAccountInfo();
         if (ai.ID == ID)
             return account;
     }
-
-    std::cout << "GetAccount_FromID::This ID doesn't exist" << std::endl;
     return nullptr;
 }
 //----------------------------------------------------------------------------------------------------------------------
@@ -193,6 +189,8 @@ Account * AccountManager::GetAccount_FromID(int ID) {
 //**********************************************************************************************************************
 // LOAD *
 //*******
+//----------------------------------------------------------------------------------------------------------------------
+
 bool AccountManager::LoadAccountsFromFile() {
     // Load accounts from Accounts.dat to accounts list. It must be done once.
 
@@ -201,20 +199,21 @@ bool AccountManager::LoadAccountsFromFile() {
 
     ClearAccounts(_accounts);
 
-    fp = fopen("Accounts.bin", "rb");
-    if (fp == nullptr) {
-        // the file has yet to be created
+    fp = fopen("Accounts.dat", "rb");
+    if (fp == nullptr)  // the file has yet to be created
         return exist = false;
-    }
-    for (;;) {
-        // the file has already been created -> push every file's account into _accounts list
-        ACCOUNT_INFO accountInfo;
-        if (fread(&accountInfo, sizeof(ACCOUNT_INFO), 1, fp) == 1) {
-            auto *acc = new Account();
-            auto &ai = const_cast<ACCOUNT_INFO &>(acc->getAccountInfo());
-            ai = accountInfo;
-            _accounts.push_back(acc);
-        } else break;
+
+    // the file has already been created -> push every file's account into _accounts list
+    ACCOUNT_INFO accountInfo;
+    while (fread(&accountInfo, sizeof(ACCOUNT_INFO), 1, fp) == 1) {
+        auto *acc = new Account();
+        auto &ai = acc->getAccountInfo();
+        ai = accountInfo;
+        if (not LoadTransactionsFromFile(acc)) {
+            delete acc;
+            return false;
+        }
+        _accounts.push_back(acc);
     }
 
     fclose(fp);
@@ -223,7 +222,7 @@ bool AccountManager::LoadAccountsFromFile() {
 //----------------------------------------------------------------------------------------------------------------------
 
 bool AccountManager::LoadTransactionsFromFile(Account *account) {
-    char fileName[150];
+    char fileName[FILENAME_MAXLEN];
     auto info = account->getAccountInfo();
     GetFileName(info, fileName);
     return LoadTransactionsFromFile(account, fileName);
@@ -233,16 +232,14 @@ bool AccountManager::LoadTransactionsFromFile(Account *account) {
 bool AccountManager::LoadTransactionsFromFile(Account *account, char *fileName) {
 
     FILE *fp;
+    double amount = 0;
 
     auto tr_list = account->getTransactions();
     Account::ClearTransactionsList(tr_list);
 
     fp = fopen(fileName, "rb");
-    if (fp == nullptr) {
+    if (fp == nullptr)
         return true;
-    }
-
-    double amount = 0;
 
     TRANS_INFO transInfo;
     for (;;) {
@@ -269,19 +266,18 @@ bool AccountManager::LoadTransactionsFromFile(Account *account, char *fileName) 
 //**********************************************************************************************************************
 // WRITE TO FILE *
 //****************
-bool AccountManager::WriteAccountsToFile() {
-    // Store account details with other accounts.
+//----------------------------------------------------------------------------------------------------------------------
+
+bool AccountManager::WriteAccountToFile(Account *account) {
     FILE *fp;
     bool isSuccess = true;
-    fp = fopen("Accounts.dat", "wb");
+    fp = fopen("Accounts.dat", "ab");
     if (fp == nullptr)
         return false;
-    for (auto &account : _accounts) {
-        if (fwrite(&account->getAccountInfo(), sizeof(ACCOUNT_INFO), 1, fp) != 1) {
-            isSuccess = false;
-            break;
-        }
-    }
+
+    if (fwrite(&account->getAccountInfo(), sizeof(ACCOUNT_INFO), 1, fp) != 1)
+        isSuccess = false;
+
     fclose(fp);
     return isSuccess;
 }
@@ -307,11 +303,227 @@ bool AccountManager::WriteTransactionToFile(const char *fileName, TRANS_INFO *tr
 //**********************************************************************************************************************
 // TRANSACTIONS *
 //***************
+//----------------------------------------------------------------------------------------------------------------------
+
 void AccountManager::GenerateTransactionsFile(Account *account) {
-    // Creates the file on which the transactions are based.
     FILE *fp;
     fp = fopen(_transFileName, "wb");
     fclose(fp);
+}
+//----------------------------------------------------------------------------------------------------------------------
+
+bool AccountManager::MakeInternalTransaction(int fromID, int toID, int day, int month, int year, double amount) {
+    char srcFileName[FILENAME_MAXLEN] = "";
+    char dstFileName[FILENAME_MAXLEN] = "";
+
+    if (fromID == toID)
+        return false;
+
+    auto *src = GetAccount_FromID(fromID);
+    auto *dst = GetAccount_FromID(toID);
+
+    if (src == nullptr or dst == nullptr)
+        return false;
+
+    // Add account structure with all data
+    auto src_Ainfo = src->getAccountInfo();
+    // Retrieve account's transactions' list
+    auto src_tlist = src->getTransactions();
+    // Add a transaction struct
+    //auto &src_Tinfo = src->getTransInfo();
+    TRANS_INFO transInfoSrc;
+
+    if (src_Ainfo.Amount >= amount) {
+        transInfoSrc.Day = day;
+        transInfoSrc.Month = month;
+        transInfoSrc.Year = year;
+        transInfoSrc.Code = Transfer_OUT;
+        transInfoSrc.Amount = -amount;
+
+        GetFileName(src_Ainfo, srcFileName);
+        if (not WriteTransactionToFile(srcFileName, &transInfoSrc))
+            return false;
+
+        auto *ptri = new(TRANS_INFO);
+        *ptri = transInfoSrc;
+        src_tlist->push_back(ptri);
+        src_Ainfo.Amount -= amount;
+
+    } else {
+        std::cout << "You don't have enough money in your account to make a transfer" << std::endl;
+        return false;
+    }
+
+    // Add account structure with all data
+    auto dst_Ainfo = dst->getAccountInfo();
+    // Retrieve account's transactions' list
+    auto dst_tlist = dst->getTransactions();
+    // Add a transaction struct
+    //auto &dst_Tinfo = src->getTransInfo();
+    TRANS_INFO transInfoDst;
+
+    transInfoDst.Day = day;
+    transInfoDst.Month = month;
+    transInfoDst.Year = year;
+    transInfoDst.Code = Transfer_IN;
+    transInfoDst.Amount = amount;
+    GetFileName(dst_Ainfo, dstFileName);
+    if (not WriteTransactionToFile(dstFileName, &transInfoDst))
+        return false;
+
+    auto *ptri = new(TRANS_INFO);
+    *ptri = transInfoDst;
+    dst_tlist->push_back(ptri);
+    dst_Ainfo.Amount += amount;
+
+    return true;
+}
+//----------------------------------------------------------------------------------------------------------------------
+
+bool AccountManager::Deposit(int ID, double amount, int day, int month, int year) {
+
+    if (amount <= 0) {
+        std::cout << "Deposit::Invalid Amount Value" << std::endl;
+        return false;
+    }
+
+    auto account = GetAccount_FromID(ID);
+    if (account == nullptr)
+        return false;
+
+    auto trs = account->getTransactions();
+
+    TRANS_INFO transInfo;
+    transInfo.Amount = amount;
+    transInfo.Code = Deposit_code;
+    transInfo.Day = day;
+    transInfo.Month = month;
+    transInfo.Year = year;
+
+    char fileName[FILENAME_MAXLEN] = "";
+    GetFileName(account->getAccountInfo(), fileName);
+    if (WriteTransactionToFile(fileName, &transInfo)) {
+        auto *ptri = new(TRANS_INFO);
+        *ptri = transInfo;
+        std::cout << amount << " deposited in your account" << std::endl;
+        trs->push_back(ptri);
+        auto &acc_Ainfo = account->getAccountInfo();
+        acc_Ainfo.Amount += amount;
+        return true;
+    }
+
+    return false;
+}
+//----------------------------------------------------------------------------------------------------------------------
+
+bool AccountManager::Deposit(Account *account, double amount, int day, int month, int year) {
+
+    if (amount <= 0) {
+        std::cout << "Deposit::Invalid Amount Value" << std::endl;
+        return false;
+    }
+
+    if (account == nullptr)
+        return false;
+
+    auto trs = account->getTransactions();
+
+    TRANS_INFO transInfo;
+    transInfo.Amount = amount;
+    transInfo.Code = Deposit_code;
+    transInfo.Day = day;
+    transInfo.Month = month;
+    transInfo.Year = year;
+
+    char fileName[FILENAME_MAXLEN] = "";
+    GetFileName(account->getAccountInfo(), fileName);
+    if (WriteTransactionToFile(fileName, &transInfo)) {
+        auto *ptri = new(TRANS_INFO);
+        *ptri = transInfo;
+        std::cout << amount << " deposited in your account" << std::endl;
+        trs->push_back(ptri);
+        std::cout << trs->size() << std::endl;
+        auto &acc_Ainfo = account->getAccountInfo();
+        acc_Ainfo.Amount += amount;
+        return true;
+    }
+    return false;
+}
+//----------------------------------------------------------------------------------------------------------------------
+
+bool AccountManager::Withdrawal(int ID, double amount, int day, int month, int year) {
+    if (amount <= 0) {
+        std::cout << "Withdrawal::Invalid Amount Value" << std::endl;
+        return false;
+    }
+
+    auto account = GetAccount_FromID(ID);
+    if (account == nullptr)
+        return false;
+
+    auto ai = account->getAccountInfo();
+    if (ai.Amount < amount)
+        return false;
+
+    auto trs = account->getTransactions();
+
+    TRANS_INFO transInfo;
+    transInfo.Amount = -amount;
+    transInfo.Code = Withdrawal_Code;
+    transInfo.Day = day;
+    transInfo.Month = month;
+    transInfo.Year = year;
+
+    char fileName[FILENAME_MAXLEN] = "";
+    GetFileName(account->getAccountInfo(), fileName);
+    if (WriteTransactionToFile(fileName, &transInfo)) {
+        auto *ptri = new(TRANS_INFO);
+        *ptri = transInfo;
+        std::cout << amount << " withdrawn from your account." << std::endl;
+        trs->push_back(ptri);
+        std::cout << trs->size() << std::endl;
+        auto &acc_Ainfo = account->getAccountInfo();
+        acc_Ainfo.Amount -= amount;
+        return true;
+    }
+    return false;
+}
+//----------------------------------------------------------------------------------------------------------------------
+
+bool AccountManager::Withdrawal(Account *account, double amount, int day, int month, int year) {
+
+    if (account == nullptr) {
+        return false;
+    }
+
+    auto ai = account->getAccountInfo();
+    if (amount <= 0 or ai.Amount < amount) {
+        std::cout << "Withdrawal::Invalid Amount Value" << std::endl;
+        return false;
+    }
+
+    auto trs = account->getTransactions();
+
+    TRANS_INFO transInfo;
+    transInfo.Amount = -amount;
+    transInfo.Code = Withdrawal_Code;
+    transInfo.Day = day;
+    transInfo.Month = month;
+    transInfo.Year = year;
+
+    char fileName[FILENAME_MAXLEN];
+    GetFileName(account->getAccountInfo(), fileName);
+    if (WriteTransactionToFile(fileName, &transInfo)) {
+        auto *ptri = new(TRANS_INFO);
+        *ptri = transInfo;
+        std::cout << amount << " withdrawn from your account." << std::endl;
+        trs->push_back(ptri);
+        std::cout << trs->size() << std::endl;
+        auto &acc_Ainfo = account->getAccountInfo();
+        acc_Ainfo.Amount -= amount;
+        return true;
+    }
+    return false;
 }
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -320,6 +532,8 @@ void AccountManager::GenerateTransactionsFile(Account *account) {
 //**********************************************************************************************************************
 // PRINT INFORMATION *
 //********************
+//----------------------------------------------------------------------------------------------------------------------
+
 void AccountManager::PrintAccounts(bool printTrans) {
     // Prints account details (ID, name, surname).
     // If printTrans is set to true it also prints all account transactions.

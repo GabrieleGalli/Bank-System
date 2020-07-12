@@ -7,6 +7,8 @@
 
 #include <cstring>
 
+const int FILENAME_MAXLEN = 150;
+
 enum TRANS_CODE {
     // In Codes
     Deposit_code,
