@@ -16,25 +16,24 @@ private:
 public:
 
     // BASIC OPERATIONS
-    bool CreateNewAccount(const char *name, const char *surname, const char *fiscalCode,
+    bool CreateNewAccount(const char *name, const char *surname, const char *fiscalCode,                          //test
                           const char *city, const char *citizen, const char *pass);
-    static void ClearAccounts(std::list<Account *> list);
+    static void ClearAccounts(std::list<Account *> *list);                                                        //test
 
 
     // CHECK
     bool CheckValidAccount(const Account_struct &aStruct);
-    bool CheckValidID(int ID);
+    bool CheckValidID(int ID);                                                                                    //test
     bool CheckValidPassword(int ID, const char *pass);
-    bool CheckValidID_Test(const int &ID);
 
 
     // GET
-    int GetNewID();
+    int GetNewID();                                                                                               //test
     int GetNumAccounts() const { return _accounts.size(); }
-    static void GetFileName(ACCOUNT_INFO &ai, char *fileName);
-    std::list<Account *> GetAccounts() { return _accounts; }
+    static void GetFileName(ACCOUNT_INFO &ai, char *fileName);                                                    //test
+    std::list<Account *> GetAccounts() { return _accounts; }                                                      //test
     static const char *GetTransactionName(TRANS_CODE transCode);
-    Account *GetAccount_FromID(int ID);
+    Account *GetAccount_FromID(int ID);                                                                           //test
 
 
     // LOAD
@@ -50,13 +49,12 @@ public:
 
     // TRANSACTIONS
     void GenerateTransactionsFile(Account *account);
+    bool MakeInternalTransaction(int fromID, int toID, int day, int month, int year, double amount);              //test
+    bool Deposit(int ID, double amount, int day, int month, int year);                                            //test
+    bool Withdrawal(int ID, double amount, int day, int month, int year);                                         //test
+    static bool Deposit(Account *account, double amount, int day, int month, int year);                           //test
+    static bool Withdrawal(Account *account, double amount, int day, int month, int year);                        //test
 
-    //crded
-    bool MakeInternalTransaction(int fromID, int toID, int day, int month, int year, double amount);
-    bool Deposit(int ID, double amount, int day, int month, int year);
-    static bool Deposit(Account *account, double amount, int day, int month, int year);
-    bool Withdrawal(int ID, double amount, int day, int month, int year);
-    static bool Withdrawal(Account *account, double amount, int day, int month, int year);
 
     // PRINT INFORMATION
     void PrintAccounts(bool printTrans);

@@ -22,9 +22,9 @@ public:
     Account() { _accountInfo.Clear(); }
     virtual ~Account() { ClearTransactionsList(&_transactions); }
 
-    ACCOUNT_INFO &getAccountInfo() { return _accountInfo; }
-    TRANS_INFO   *getTransInfo()   { return &_transInfo;  }
-    std::list<TRANS_INFO *> *getTransactions() { return &_transactions; }
+    ACCOUNT_INFO &GetAccountInfo() { return _accountInfo; }
+    TRANS_INFO   *GetTransInfo()   { return &_transInfo;  }
+    std::list<TRANS_INFO *> *GetTransactions() { return &_transactions; }
 
     double GetAmount();
     static void ClearTransactionsList(std::list<TRANS_INFO* > *tlist);

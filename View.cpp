@@ -8,7 +8,7 @@
 
 using namespace std;
 
-bool View::Show(bool visible) {
+void View::Show(bool visible) {
     _accountManager->LoadAccountsFromFile();
     while (visible) {
         int homeChoice;
@@ -33,7 +33,7 @@ bool View::Show(bool visible) {
                 cin >> pass;
                 if (_accountManager->CheckValidID(ID) and _accountManager->CheckValidPassword(ID, pass)) {
                     auto account = _accountManager->GetAccount_FromID(ID);
-                    auto accountInfo = account->getAccountInfo();
+                    auto accountInfo = account->GetAccountInfo();
                     AccountManager::LoadTransactionsFromFile(account);
                     int operationChoice = 0;
                     double balance = accountInfo.Amount;
@@ -70,17 +70,17 @@ bool View::Show(bool visible) {
                             //Withdrawal
                             cout << "How much money to withdraw?" << endl;
                             cin >> amount;
-                            if (amount > 0 and accountInfo.Amount >= amount) {
+                            if (amount > 0) {
                                 TransactionDate trDateWith;
                                 day = trDateWith.getDay();
                                 month = trDateWith.getMonth();
                                 year = trDateWith.getYear();
-                                AccountManager::Withdrawal(account, amount, day, month, year);
-                                balance -= amount;
+                                if (AccountManager::Withdrawal(account, amount, day, month, year))
+                                    balance -= amount;
+                                else
+                                    cout << "You have not enough money." << endl;
                             }
-                            else if (accountInfo.Amount < amount)
-                                cout << "You have not enough money." << endl;
-                            else if (amount < 0)
+                            else
                                 cout << "Impossible to withdrawal 0$." << endl;
                             break;
                         }
@@ -100,7 +100,8 @@ bool View::Show(bool visible) {
                                     _accountManager->MakeInternalTransaction(accountInfo.ID, toID, day, month, year,amount);
                                     balance -= amount;
                                     cout << "Done! " << amount << "$ transferred to " << toID << ". " << endl;
-                                }
+                                } else
+                                    cout << "Invalid amount value." << endl;
                             } else
                                 cout << "This is not a valid ID." << endl;
                             break;

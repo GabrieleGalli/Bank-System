@@ -17,7 +17,7 @@ public:
 
     ~View() = default;
 
-    bool Show(bool visible);
+    void Show(bool visible);
 };
 
 

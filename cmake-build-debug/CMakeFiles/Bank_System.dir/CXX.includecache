@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/gabri/CLionProjects/Bank-System/Account.cpp
+iostream
+-
+Account.h
+/home/gabri/CLionProjects/Bank-System/Account.h
+
 /home/gabri/CLionProjects/Bank-System/Account.h
 FileStructure.h
 /home/gabri/CLionProjects/Bank-System/FileStructure.h
@@ -43,4 +49,12 @@ iostream
 /home/gabri/CLionProjects/Bank-System/View.h
 AccountManager.h
 /home/gabri/CLionProjects/Bank-System/AccountManager.h
+
+/home/gabri/CLionProjects/Bank-System/main.cpp
+iostream
+-
+AccountManager.h
+/home/gabri/CLionProjects/Bank-System/AccountManager.h
+View.h
+/home/gabri/CLionProjects/Bank-System/View.h
 
