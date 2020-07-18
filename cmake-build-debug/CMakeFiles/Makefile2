@@ -35,19 +35,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/114/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/114/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gabri/CLionProjects/Bank-System
+CMAKE_SOURCE_DIR = /home/gabri/Bank-System
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gabri/CLionProjects/Bank-System/cmake-build-debug
+CMAKE_BINARY_DIR = /home/gabri/Bank-System/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -158,14 +158,14 @@ Google_tests/lib/googletest/clean: Google_tests/lib/googletest/CMakeFiles/gtest.
 CMakeFiles/Bank_System.dir/all: CMakeFiles/core.dir/all
 	$(MAKE) -f CMakeFiles/Bank_System.dir/build.make CMakeFiles/Bank_System.dir/depend
 	$(MAKE) -f CMakeFiles/Bank_System.dir/build.make CMakeFiles/Bank_System.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target Bank_System"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabri/Bank-System/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target Bank_System"
 .PHONY : CMakeFiles/Bank_System.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Bank_System.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/Bank-System/cmake-build-debug/CMakeFiles 12
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Bank_System.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/Bank-System/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/Bank_System.dir/rule
 
 # Convenience name for target.
@@ -185,14 +185,14 @@ CMakeFiles/Bank_System.dir/clean:
 CMakeFiles/core.dir/all:
 	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/depend
 	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles --progress-num=9,10,11,12,13 "Built target core"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabri/Bank-System/cmake-build-debug/CMakeFiles --progress-num=10,11,12,13,14,15 "Built target core"
 .PHONY : CMakeFiles/core.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/core.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/Bank-System/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/core.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/Bank-System/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/core.dir/rule
 
 # Convenience name for target.
@@ -214,14 +214,14 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/all: Google_tests/lib/googletest/CM
 Google_tests/CMakeFiles/Google_Tests_run.dir/all: Google_tests/lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/depend
 	$(MAKE) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles --progress-num=6,7,8 "Built target Google_Tests_run"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabri/Bank-System/cmake-build-debug/CMakeFiles --progress-num=7,8,9 "Built target Google_Tests_run"
 .PHONY : Google_tests/CMakeFiles/Google_Tests_run.dir/all
 
 # Build rule for subdir invocation for target.
 Google_tests/CMakeFiles/Google_Tests_run.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/Bank-System/cmake-build-debug/CMakeFiles 13
 	$(MAKE) -f CMakeFiles/Makefile2 Google_tests/CMakeFiles/Google_Tests_run.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/Bank-System/cmake-build-debug/CMakeFiles 0
 .PHONY : Google_tests/CMakeFiles/Google_Tests_run.dir/rule
 
 # Convenience name for target.
@@ -242,14 +242,14 @@ Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/all: Google_tests/lib/goog
 Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/all: Google_tests/lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/build.make Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/build.make Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles --progress-num=16,17 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabri/Bank-System/cmake-build-debug/CMakeFiles --progress-num=18,19 "Built target gmock_main"
 .PHONY : Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
 Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/Bank-System/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/Bank-System/cmake-build-debug/CMakeFiles 0
 .PHONY : Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/rule
 
 # Convenience name for target.
@@ -269,14 +269,14 @@ Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/clean:
 Google_tests/lib/googlemock/CMakeFiles/gmock.dir/all: Google_tests/lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f Google_tests/lib/googlemock/CMakeFiles/gmock.dir/build.make Google_tests/lib/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f Google_tests/lib/googlemock/CMakeFiles/gmock.dir/build.make Google_tests/lib/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles --progress-num=14,15 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabri/Bank-System/cmake-build-debug/CMakeFiles --progress-num=16,17 "Built target gmock"
 .PHONY : Google_tests/lib/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
 Google_tests/lib/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/Bank-System/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 Google_tests/lib/googlemock/CMakeFiles/gmock.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/Bank-System/cmake-build-debug/CMakeFiles 0
 .PHONY : Google_tests/lib/googlemock/CMakeFiles/gmock.dir/rule
 
 # Convenience name for target.
@@ -296,14 +296,14 @@ Google_tests/lib/googlemock/CMakeFiles/gmock.dir/clean:
 Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/all: Google_tests/lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/build.make Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/build.make Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles --progress-num=20,21 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabri/Bank-System/cmake-build-debug/CMakeFiles --progress-num=22,23 "Built target gtest_main"
 .PHONY : Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
 Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/Bank-System/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/Bank-System/cmake-build-debug/CMakeFiles 0
 .PHONY : Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/rule
 
 # Convenience name for target.
@@ -323,14 +323,14 @@ Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/clean:
 Google_tests/lib/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f Google_tests/lib/googletest/CMakeFiles/gtest.dir/build.make Google_tests/lib/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f Google_tests/lib/googletest/CMakeFiles/gtest.dir/build.make Google_tests/lib/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles --progress-num=18,19 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabri/Bank-System/cmake-build-debug/CMakeFiles --progress-num=20,21 "Built target gtest"
 .PHONY : Google_tests/lib/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
 Google_tests/lib/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/Bank-System/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 Google_tests/lib/googletest/CMakeFiles/gtest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/Bank-System/cmake-build-debug/CMakeFiles 0
 .PHONY : Google_tests/lib/googletest/CMakeFiles/gtest.dir/rule
 
 # Convenience name for target.

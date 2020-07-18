@@ -4,10 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/gabri/CLionProjects/Bank-System/Account.cpp" "/home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles/Bank_System.dir/Account.cpp.o"
-  "/home/gabri/CLionProjects/Bank-System/AccountManager.cpp" "/home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles/Bank_System.dir/AccountManager.cpp.o"
-  "/home/gabri/CLionProjects/Bank-System/View.cpp" "/home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles/Bank_System.dir/View.cpp.o"
-  "/home/gabri/CLionProjects/Bank-System/main.cpp" "/home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles/Bank_System.dir/main.cpp.o"
+  "/home/gabri/Bank-System/Account.cpp" "/home/gabri/Bank-System/cmake-build-debug/CMakeFiles/Bank_System.dir/Account.cpp.o"
+  "/home/gabri/Bank-System/AccountManager.cpp" "/home/gabri/Bank-System/cmake-build-debug/CMakeFiles/Bank_System.dir/AccountManager.cpp.o"
+  "/home/gabri/Bank-System/Transaction.cpp" "/home/gabri/Bank-System/cmake-build-debug/CMakeFiles/Bank_System.dir/Transaction.cpp.o"
+  "/home/gabri/Bank-System/View.cpp" "/home/gabri/Bank-System/cmake-build-debug/CMakeFiles/Bank_System.dir/View.cpp.o"
+  "/home/gabri/Bank-System/main.cpp" "/home/gabri/Bank-System/cmake-build-debug/CMakeFiles/Bank_System.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,7 +18,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles/core.dir/DependInfo.cmake"
+  "/home/gabri/Bank-System/cmake-build-debug/CMakeFiles/core.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

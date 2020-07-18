@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/114/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/114/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gabri/CLionProjects/Bank-System
+CMAKE_SOURCE_DIR = /home/gabri/Bank-System
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gabri/CLionProjects/Bank-System/cmake-build-debug
+CMAKE_BINARY_DIR = /home/gabri/Bank-System/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,31 +59,31 @@ CMAKE_BINARY_DIR = /home/gabri/CLionProjects/Bank-System/cmake-build-debug
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/snap/clion/114/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/snap/clion/114/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/snap/clion/114/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/snap/clion/114/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/114/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -94,7 +94,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/114/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -105,13 +105,13 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/snap/clion/114/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+	/home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/snap/clion/114/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+	/home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target list_install_components
@@ -126,14 +126,14 @@ list_install_components/fast: list_install_components
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles /home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/CMakeFiles/progress.marks
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 Google_tests/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles 0
+	cd /home/gabri/Bank-System/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/Bank-System/cmake-build-debug/CMakeFiles /home/gabri/Bank-System/cmake-build-debug/Google_tests/CMakeFiles/progress.marks
+	cd /home/gabri/Bank-System/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 Google_tests/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/Bank-System/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 Google_tests/clean
+	cd /home/gabri/Bank-System/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 Google_tests/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 Google_tests/preinstall
+	cd /home/gabri/Bank-System/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 Google_tests/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 Google_tests/preinstall
+	cd /home/gabri/Bank-System/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 Google_tests/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/gabri/Bank-System/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Google_tests/CMakeFiles/Google_Tests_run.dir/rule:
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 Google_tests/CMakeFiles/Google_Tests_run.dir/rule
+	cd /home/gabri/Bank-System/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 Google_tests/CMakeFiles/Google_Tests_run.dir/rule
 .PHONY : Google_tests/CMakeFiles/Google_Tests_run.dir/rule
 
 # Convenience name for target.
@@ -168,7 +168,7 @@ Google_Tests_run: Google_tests/CMakeFiles/Google_Tests_run.dir/rule
 
 # fast build rule for target.
 Google_Tests_run/fast:
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug && $(MAKE) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/build
+	cd /home/gabri/Bank-System/cmake-build-debug && $(MAKE) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/build
 .PHONY : Google_Tests_run/fast
 
 AccountManager_TEST.o: AccountManager_TEST.cpp.o
@@ -177,7 +177,7 @@ AccountManager_TEST.o: AccountManager_TEST.cpp.o
 
 # target to build an object file
 AccountManager_TEST.cpp.o:
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug && $(MAKE) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.o
+	cd /home/gabri/Bank-System/cmake-build-debug && $(MAKE) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.o
 .PHONY : AccountManager_TEST.cpp.o
 
 AccountManager_TEST.i: AccountManager_TEST.cpp.i
@@ -186,7 +186,7 @@ AccountManager_TEST.i: AccountManager_TEST.cpp.i
 
 # target to preprocess a source file
 AccountManager_TEST.cpp.i:
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug && $(MAKE) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.i
+	cd /home/gabri/Bank-System/cmake-build-debug && $(MAKE) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.i
 .PHONY : AccountManager_TEST.cpp.i
 
 AccountManager_TEST.s: AccountManager_TEST.cpp.s
@@ -195,7 +195,7 @@ AccountManager_TEST.s: AccountManager_TEST.cpp.s
 
 # target to generate assembly for a file
 AccountManager_TEST.cpp.s:
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug && $(MAKE) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.s
+	cd /home/gabri/Bank-System/cmake-build-debug && $(MAKE) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.s
 .PHONY : AccountManager_TEST.cpp.s
 
 runAllTests.o: runAllTests.cpp.o
@@ -204,7 +204,7 @@ runAllTests.o: runAllTests.cpp.o
 
 # target to build an object file
 runAllTests.cpp.o:
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug && $(MAKE) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.o
+	cd /home/gabri/Bank-System/cmake-build-debug && $(MAKE) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.o
 .PHONY : runAllTests.cpp.o
 
 runAllTests.i: runAllTests.cpp.i
@@ -213,7 +213,7 @@ runAllTests.i: runAllTests.cpp.i
 
 # target to preprocess a source file
 runAllTests.cpp.i:
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug && $(MAKE) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.i
+	cd /home/gabri/Bank-System/cmake-build-debug && $(MAKE) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.i
 .PHONY : runAllTests.cpp.i
 
 runAllTests.s: runAllTests.cpp.s
@@ -222,7 +222,7 @@ runAllTests.s: runAllTests.cpp.s
 
 # target to generate assembly for a file
 runAllTests.cpp.s:
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug && $(MAKE) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.s
+	cd /home/gabri/Bank-System/cmake-build-debug && $(MAKE) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.s
 .PHONY : runAllTests.cpp.s
 
 # Help Target
@@ -255,6 +255,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/gabri/Bank-System/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

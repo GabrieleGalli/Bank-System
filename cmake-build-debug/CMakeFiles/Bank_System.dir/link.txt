@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/Bank_System.dir/main.cpp.o CMakeFiles/Bank_System.dir/Account.cpp.o CMakeFiles/Bank_System.dir/AccountManager.cpp.o CMakeFiles/Bank_System.dir/View.cpp.o  -o Bank_System  libcore.a 
+/bin/c++  -g   CMakeFiles/Bank_System.dir/main.cpp.o CMakeFiles/Bank_System.dir/Account.cpp.o CMakeFiles/Bank_System.dir/AccountManager.cpp.o CMakeFiles/Bank_System.dir/View.cpp.o CMakeFiles/Bank_System.dir/Transaction.cpp.o  -o Bank_System  libcore.a 

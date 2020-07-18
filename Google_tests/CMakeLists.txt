@@ -9,7 +9,7 @@ set(gtest_SOURCE_DIR lib)
 
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
-set(TEST_SOURCE_FILES runAllTests.cpp AccountManager_TEST.cpp)
+set(TEST_SOURCE_FILES runAllTests.cpp TESTS.cpp)
 
 # 'Google_Tests_run' is the target name
 add_executable(Google_Tests_run ${TEST_SOURCE_FILES})

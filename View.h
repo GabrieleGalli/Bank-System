@@ -5,7 +5,6 @@
 #ifndef BANK_SYSTEM_VIEW_H
 #define BANK_SYSTEM_VIEW_H
 
-
 #include "AccountManager.h"
 
 class View {
@@ -19,6 +18,5 @@ public:
 
     void Show(bool visible);
 };
-
 
 #endif //BANK_SYSTEM_VIEW_H

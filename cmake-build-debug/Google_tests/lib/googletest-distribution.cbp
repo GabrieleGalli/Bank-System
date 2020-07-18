@@ -8,26 +8,26 @@
 		<Option virtualFolders="CMake Files\;CMake Files\Google_tests\;CMake Files\Google_tests\lib\;CMake Files\Google_tests\lib\googlemock\;CMake Files\Google_tests\lib\googlemock\cmake\;CMake Files\Google_tests\lib\googletest\;CMake Files\Google_tests\lib\googletest\cmake\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib"/>
+				<Option working_dir="/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock_main">
-				<Option output="/home/gabri/CLionProjects/Bank-System/cmake-build-debug/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googlemock"/>
+				<Option output="/home/gabri/Bank-System/cmake-build-debug/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googlemock/include"/>
-					<Add directory="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googlemock"/>
-					<Add directory="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest/include"/>
-					<Add directory="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest"/>
+					<Add directory="/home/gabri/Bank-System/Google_tests/lib/googlemock/include"/>
+					<Add directory="/home/gabri/Bank-System/Google_tests/lib/googlemock"/>
+					<Add directory="/home/gabri/Bank-System/Google_tests/lib/googletest/include"/>
+					<Add directory="/home/gabri/Bank-System/Google_tests/lib/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -37,23 +37,23 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
+					<CompileFile command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock_main/fast">
-				<Option output="/home/gabri/CLionProjects/Bank-System/cmake-build-debug/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googlemock"/>
+				<Option output="/home/gabri/Bank-System/cmake-build-debug/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googlemock/include"/>
-					<Add directory="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googlemock"/>
-					<Add directory="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest/include"/>
-					<Add directory="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest"/>
+					<Add directory="/home/gabri/Bank-System/Google_tests/lib/googlemock/include"/>
+					<Add directory="/home/gabri/Bank-System/Google_tests/lib/googlemock"/>
+					<Add directory="/home/gabri/Bank-System/Google_tests/lib/googletest/include"/>
+					<Add directory="/home/gabri/Bank-System/Google_tests/lib/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -63,23 +63,23 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock_main/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock_main/fast"/>
+					<CompileFile command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock">
-				<Option output="/home/gabri/CLionProjects/Bank-System/cmake-build-debug/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googlemock"/>
+				<Option output="/home/gabri/Bank-System/cmake-build-debug/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googlemock/include"/>
-					<Add directory="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googlemock"/>
-					<Add directory="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest/include"/>
-					<Add directory="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest"/>
+					<Add directory="/home/gabri/Bank-System/Google_tests/lib/googlemock/include"/>
+					<Add directory="/home/gabri/Bank-System/Google_tests/lib/googlemock"/>
+					<Add directory="/home/gabri/Bank-System/Google_tests/lib/googletest/include"/>
+					<Add directory="/home/gabri/Bank-System/Google_tests/lib/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -89,23 +89,23 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock"/>
+					<CompileFile command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock/fast">
-				<Option output="/home/gabri/CLionProjects/Bank-System/cmake-build-debug/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googlemock"/>
+				<Option output="/home/gabri/Bank-System/cmake-build-debug/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googlemock/include"/>
-					<Add directory="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googlemock"/>
-					<Add directory="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest/include"/>
-					<Add directory="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest"/>
+					<Add directory="/home/gabri/Bank-System/Google_tests/lib/googlemock/include"/>
+					<Add directory="/home/gabri/Bank-System/Google_tests/lib/googlemock"/>
+					<Add directory="/home/gabri/Bank-System/Google_tests/lib/googletest/include"/>
+					<Add directory="/home/gabri/Bank-System/Google_tests/lib/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -115,21 +115,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock/fast"/>
+					<CompileFile command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main">
-				<Option output="/home/gabri/CLionProjects/Bank-System/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googletest"/>
+				<Option output="/home/gabri/Bank-System/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest/include"/>
-					<Add directory="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest"/>
+					<Add directory="/home/gabri/Bank-System/Google_tests/lib/googletest/include"/>
+					<Add directory="/home/gabri/Bank-System/Google_tests/lib/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -139,21 +139,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main/fast">
-				<Option output="/home/gabri/CLionProjects/Bank-System/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googletest"/>
+				<Option output="/home/gabri/Bank-System/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest/include"/>
-					<Add directory="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest"/>
+					<Add directory="/home/gabri/Bank-System/Google_tests/lib/googletest/include"/>
+					<Add directory="/home/gabri/Bank-System/Google_tests/lib/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -163,21 +163,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest">
-				<Option output="/home/gabri/CLionProjects/Bank-System/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googletest"/>
+				<Option output="/home/gabri/Bank-System/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest/include"/>
-					<Add directory="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest"/>
+					<Add directory="/home/gabri/Bank-System/Google_tests/lib/googletest/include"/>
+					<Add directory="/home/gabri/Bank-System/Google_tests/lib/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -187,21 +187,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest/fast">
-				<Option output="/home/gabri/CLionProjects/Bank-System/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googletest"/>
+				<Option output="/home/gabri/Bank-System/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest/include"/>
-					<Add directory="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest"/>
+					<Add directory="/home/gabri/Bank-System/Google_tests/lib/googletest/include"/>
+					<Add directory="/home/gabri/Bank-System/Google_tests/lib/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -211,56 +211,56 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/make -j4 -f &quot;/home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googlemock/src/gmock-all.cc">
+		<Unit filename="/home/gabri/Bank-System/Google_tests/lib/googlemock/src/gmock-all.cc">
 			<Option target="gmock"/>
 		</Unit>
-		<Unit filename="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googlemock/src/gmock_main.cc">
+		<Unit filename="/home/gabri/Bank-System/Google_tests/lib/googlemock/src/gmock_main.cc">
 			<Option target="gmock_main"/>
 		</Unit>
-		<Unit filename="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest/src/gtest-all.cc">
+		<Unit filename="/home/gabri/Bank-System/Google_tests/lib/googletest/src/gtest-all.cc">
 			<Option target="gtest"/>
 		</Unit>
-		<Unit filename="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest/src/gtest_main.cc">
+		<Unit filename="/home/gabri/Bank-System/Google_tests/lib/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="/home/gabri/CLionProjects/Bank-System/CMakeLists.txt">
+		<Unit filename="/home/gabri/Bank-System/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/gabri/CLionProjects/Bank-System/Google_tests/CMakeLists.txt">
+		<Unit filename="/home/gabri/Bank-System/Google_tests/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\Google_tests\"/>
 		</Unit>
-		<Unit filename="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/CMakeLists.txt">
+		<Unit filename="/home/gabri/Bank-System/Google_tests/lib/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\Google_tests\lib\"/>
 		</Unit>
-		<Unit filename="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googlemock/CMakeLists.txt">
+		<Unit filename="/home/gabri/Bank-System/Google_tests/lib/googlemock/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\Google_tests\lib\googlemock\"/>
 		</Unit>
-		<Unit filename="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googlemock/cmake/gmock.pc.in">
+		<Unit filename="/home/gabri/Bank-System/Google_tests/lib/googlemock/cmake/gmock.pc.in">
 			<Option virtualFolder="CMake Files\Google_tests\lib\googlemock\cmake\"/>
 		</Unit>
-		<Unit filename="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googlemock/cmake/gmock_main.pc.in">
+		<Unit filename="/home/gabri/Bank-System/Google_tests/lib/googlemock/cmake/gmock_main.pc.in">
 			<Option virtualFolder="CMake Files\Google_tests\lib\googlemock\cmake\"/>
 		</Unit>
-		<Unit filename="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest/CMakeLists.txt">
+		<Unit filename="/home/gabri/Bank-System/Google_tests/lib/googletest/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\Google_tests\lib\googletest\"/>
 		</Unit>
-		<Unit filename="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest/cmake/Config.cmake.in">
+		<Unit filename="/home/gabri/Bank-System/Google_tests/lib/googletest/cmake/Config.cmake.in">
 			<Option virtualFolder="CMake Files\Google_tests\lib\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest/cmake/gtest.pc.in">
+		<Unit filename="/home/gabri/Bank-System/Google_tests/lib/googletest/cmake/gtest.pc.in">
 			<Option virtualFolder="CMake Files\Google_tests\lib\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest/cmake/gtest_main.pc.in">
+		<Unit filename="/home/gabri/Bank-System/Google_tests/lib/googletest/cmake/gtest_main.pc.in">
 			<Option virtualFolder="CMake Files\Google_tests\lib\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest/cmake/internal_utils.cmake">
+		<Unit filename="/home/gabri/Bank-System/Google_tests/lib/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\Google_tests\lib\googletest\cmake\"/>
 		</Unit>
 	</Project>

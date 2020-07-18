@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/114/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/114/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gabri/CLionProjects/Bank-System
+CMAKE_SOURCE_DIR = /home/gabri/Bank-System
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gabri/CLionProjects/Bank-System/cmake-build-debug
+CMAKE_BINARY_DIR = /home/gabri/Bank-System/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include Google_tests/CMakeFiles/Google_Tests_run.dir/depend.make
@@ -59,29 +59,29 @@ include Google_tests/CMakeFiles/Google_Tests_run.dir/flags.make
 
 Google_tests/CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.o: Google_tests/CMakeFiles/Google_Tests_run.dir/flags.make
 Google_tests/CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.o: ../Google_tests/runAllTests.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Google_tests/CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.o"
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.o -c /home/gabri/CLionProjects/Bank-System/Google_tests/runAllTests.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabri/Bank-System/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Google_tests/CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.o"
+	cd /home/gabri/Bank-System/cmake-build-debug/Google_tests && /bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.o -c /home/gabri/Bank-System/Google_tests/runAllTests.cpp
 
 Google_tests/CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.i"
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabri/CLionProjects/Bank-System/Google_tests/runAllTests.cpp > CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.i
+	cd /home/gabri/Bank-System/cmake-build-debug/Google_tests && /bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabri/Bank-System/Google_tests/runAllTests.cpp > CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.i
 
 Google_tests/CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.s"
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabri/CLionProjects/Bank-System/Google_tests/runAllTests.cpp -o CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.s
+	cd /home/gabri/Bank-System/cmake-build-debug/Google_tests && /bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabri/Bank-System/Google_tests/runAllTests.cpp -o CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.s
 
 Google_tests/CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.o: Google_tests/CMakeFiles/Google_Tests_run.dir/flags.make
 Google_tests/CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.o: ../Google_tests/AccountManager_TEST.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Google_tests/CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.o"
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.o -c /home/gabri/CLionProjects/Bank-System/Google_tests/AccountManager_TEST.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabri/Bank-System/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Google_tests/CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.o"
+	cd /home/gabri/Bank-System/cmake-build-debug/Google_tests && /bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.o -c /home/gabri/Bank-System/Google_tests/AccountManager_TEST.cpp
 
 Google_tests/CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.i"
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabri/CLionProjects/Bank-System/Google_tests/AccountManager_TEST.cpp > CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.i
+	cd /home/gabri/Bank-System/cmake-build-debug/Google_tests && /bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabri/Bank-System/Google_tests/AccountManager_TEST.cpp > CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.i
 
 Google_tests/CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.s"
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabri/CLionProjects/Bank-System/Google_tests/AccountManager_TEST.cpp -o CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.s
+	cd /home/gabri/Bank-System/cmake-build-debug/Google_tests && /bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabri/Bank-System/Google_tests/AccountManager_TEST.cpp -o CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.s
 
 # Object files for target Google_Tests_run
 Google_Tests_run_OBJECTS = \
@@ -99,8 +99,8 @@ Google_tests/Google_Tests_run: lib/libgtest_maind.a
 Google_tests/Google_Tests_run: libcore.a
 Google_tests/Google_Tests_run: lib/libgtestd.a
 Google_tests/Google_Tests_run: Google_tests/CMakeFiles/Google_Tests_run.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Google_Tests_run"
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Google_Tests_run.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gabri/Bank-System/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Google_Tests_run"
+	cd /home/gabri/Bank-System/cmake-build-debug/Google_tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Google_Tests_run.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 Google_tests/CMakeFiles/Google_Tests_run.dir/build: Google_tests/Google_Tests_run
@@ -108,10 +108,10 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/build: Google_tests/Google_Tests_ru
 .PHONY : Google_tests/CMakeFiles/Google_Tests_run.dir/build
 
 Google_tests/CMakeFiles/Google_Tests_run.dir/clean:
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests && $(CMAKE_COMMAND) -P CMakeFiles/Google_Tests_run.dir/cmake_clean.cmake
+	cd /home/gabri/Bank-System/cmake-build-debug/Google_tests && $(CMAKE_COMMAND) -P CMakeFiles/Google_Tests_run.dir/cmake_clean.cmake
 .PHONY : Google_tests/CMakeFiles/Google_Tests_run.dir/clean
 
 Google_tests/CMakeFiles/Google_Tests_run.dir/depend:
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gabri/CLionProjects/Bank-System /home/gabri/CLionProjects/Bank-System/Google_tests /home/gabri/CLionProjects/Bank-System/cmake-build-debug /home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests /home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gabri/Bank-System/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gabri/Bank-System /home/gabri/Bank-System/Google_tests /home/gabri/Bank-System/cmake-build-debug /home/gabri/Bank-System/cmake-build-debug/Google_tests /home/gabri/Bank-System/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : Google_tests/CMakeFiles/Google_Tests_run.dir/depend
 

@@ -3,10 +3,22 @@
 //
 
 #include "View.h"
-#include "TransactionDate.h"
 #include <iostream>
 
 using namespace std;
+
+bool IsUINT_Number(string strNum) {
+    int iNumChars = 0;
+    for (char ch : strNum) {
+        if ((ch < '0') or (ch < '1'))
+            return false;
+        iNumChars++;
+    }
+    if (iNumChars == 0)
+        return false;
+
+    return not((iNumChars > 1) && (strNum[0] == '0'));
+}
 
 void View::Show(bool visible) {
     _accountManager->LoadAccountsFromFile();
@@ -22,47 +34,54 @@ void View::Show(bool visible) {
 
         switch (homeChoice) {
             case 1: {
+                Account tmp;
                 //Login
+                string strID, pass;
                 int ID;
-                char pass[50];
                 cout << "Login" << endl
-                     << "*****" << endl << endl
-                     << "ID: ";
-                cin >> ID;
-                cout << "Password: ";
-                cin >> pass;
+                     << "*****" << endl << endl;
+                for (;;) {
+                    cout << "ID: ";
+                    cin >> strID;
+                    if (not IsUINT_Number(strID))
+                        continue;
+                    ID = (int) strtol(strID.c_str(), nullptr, 10);
+                    if (ID <= 0)
+                        continue;
+                    break;
+                }
+                do {
+                    cout << "Password: ";
+                    cin >> pass;
+                }
+                while (not tmp.SetPassword(pass));
+
                 if (_accountManager->CheckValidID(ID) and _accountManager->CheckValidPassword(ID, pass)) {
                     auto account = _accountManager->GetAccount_FromID(ID);
-                    auto accountInfo = account->GetAccountInfo();
                     AccountManager::LoadTransactionsFromFile(account);
                     int operationChoice = 0;
-                    double balance = accountInfo.Amount;
+                    double balance = account->GetAmount();
                     cout << endl << endl << endl
-                         << "Welcome " << accountInfo.Name << "."  << endl   << endl
-                         << "Current Balance: " << balance << "$" << endl
-                         << "Available Operations:"   << endl
-                         << "********************"    << endl << endl
-                         << "1) Deposit"              << endl
-                         << "2) Withdrawal"           << endl
-                         << "3) Transfer"             << endl
-                         << "4) Transactions history" << endl
-                         << "5) Exit"                 << endl;
+                         << "Welcome " << account->GetName() << "."  << endl << endl
+                         << "Current Balance: " << balance   << "$"  << endl
+                         << "Available Operations:"          << endl
+                         << "********************"           << endl << endl
+                         << "1) Deposit"                     << endl
+                         << "2) Withdrawal"                  << endl
+                         << "3) Transfer"                    << endl
+                         << "4) Transactions history"        << endl
+                         << "5) Exit"                        << endl;
                     cin >> operationChoice;
 
                     switch (operationChoice) {
-                        int day, month, year;
                         double amount;
                         case 1: {
                             //Deposit
                             cout << "How much to deposit?" << endl;
                             cin >> amount;
-                            if (amount > 0) {
-                                TransactionDate trDateDep;
-                                day = trDateDep.getDay();
-                                month = trDateDep.getMonth();
-                                year = trDateDep.getYear();
-                                AccountManager::Deposit(account, amount, day, month, year);
-                            } else
+                            if (amount > 0)
+                                AccountManager::Deposit(account, amount);
+                            else
                                 cout << "Impossible to deposit 0$." << endl;
                             break;
                         }
@@ -70,16 +89,11 @@ void View::Show(bool visible) {
                             //Withdrawal
                             cout << "How much money to withdraw?" << endl;
                             cin >> amount;
-                            if (amount > 0) {
-                                TransactionDate trDateWith;
-                                day = trDateWith.getDay();
-                                month = trDateWith.getMonth();
-                                year = trDateWith.getYear();
-                                if (AccountManager::Withdrawal(account, amount, day, month, year))
+                            if (amount > 0)
+                                if (AccountManager::Withdrawal(account, amount))
                                     balance -= amount;
                                 else
                                     cout << "You have not enough money." << endl;
-                            }
                             else
                                 cout << "Impossible to withdrawal 0$." << endl;
                             break;
@@ -93,11 +107,7 @@ void View::Show(bool visible) {
                                 cout << "How much Transfer to " << toID << "?" << endl;
                                 cin >> amount;
                                 if (amount > 0) {
-                                    TransactionDate trDateTransf;
-                                    day = trDateTransf.getDay();
-                                    month = trDateTransf.getMonth();
-                                    year = trDateTransf.getYear();
-                                    _accountManager->MakeInternalTransaction(accountInfo.ID, toID, day, month, year,amount);
+                                    _accountManager->MakeInternalTransaction(account->GetID(), toID, amount);
                                     balance -= amount;
                                     cout << "Done! " << amount << "$ transferred to " << toID << ". " << endl;
                                 } else
@@ -108,8 +118,7 @@ void View::Show(bool visible) {
                         }
                         case 4:
                             //Print all Transactions
-                            _accountManager->PrintTransactions(accountInfo.ID);
-
+                            _accountManager->PrintTransactions(account->GetID());
                         case 5:
                             break;
                     }
@@ -123,12 +132,7 @@ void View::Show(bool visible) {
 
             case 2: {
                 //Register
-                char name[50];
-                char surname[50];
-                char fiscalCode[18];
-                char city[50];
-                char citizen[20];
-                char pass[50];
+                string name, surname, fiscalCode, city, citizen, pass;
                 cout << "Register" << endl
                      << "********" << endl << endl,
                         cout << "Name: ";

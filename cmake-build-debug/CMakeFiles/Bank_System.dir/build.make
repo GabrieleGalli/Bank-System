@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/114/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/114/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gabri/CLionProjects/Bank-System
+CMAKE_SOURCE_DIR = /home/gabri/Bank-System
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gabri/CLionProjects/Bank-System/cmake-build-debug
+CMAKE_BINARY_DIR = /home/gabri/Bank-System/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Bank_System.dir/depend.make
@@ -59,62 +59,76 @@ include CMakeFiles/Bank_System.dir/flags.make
 
 CMakeFiles/Bank_System.dir/main.cpp.o: CMakeFiles/Bank_System.dir/flags.make
 CMakeFiles/Bank_System.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Bank_System.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bank_System.dir/main.cpp.o -c /home/gabri/CLionProjects/Bank-System/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabri/Bank-System/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Bank_System.dir/main.cpp.o"
+	/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bank_System.dir/main.cpp.o -c /home/gabri/Bank-System/main.cpp
 
 CMakeFiles/Bank_System.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Bank_System.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabri/CLionProjects/Bank-System/main.cpp > CMakeFiles/Bank_System.dir/main.cpp.i
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabri/Bank-System/main.cpp > CMakeFiles/Bank_System.dir/main.cpp.i
 
 CMakeFiles/Bank_System.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Bank_System.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabri/CLionProjects/Bank-System/main.cpp -o CMakeFiles/Bank_System.dir/main.cpp.s
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabri/Bank-System/main.cpp -o CMakeFiles/Bank_System.dir/main.cpp.s
 
 CMakeFiles/Bank_System.dir/Account.cpp.o: CMakeFiles/Bank_System.dir/flags.make
 CMakeFiles/Bank_System.dir/Account.cpp.o: ../Account.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Bank_System.dir/Account.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bank_System.dir/Account.cpp.o -c /home/gabri/CLionProjects/Bank-System/Account.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabri/Bank-System/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Bank_System.dir/Account.cpp.o"
+	/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bank_System.dir/Account.cpp.o -c /home/gabri/Bank-System/Account.cpp
 
 CMakeFiles/Bank_System.dir/Account.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Bank_System.dir/Account.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabri/CLionProjects/Bank-System/Account.cpp > CMakeFiles/Bank_System.dir/Account.cpp.i
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabri/Bank-System/Account.cpp > CMakeFiles/Bank_System.dir/Account.cpp.i
 
 CMakeFiles/Bank_System.dir/Account.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Bank_System.dir/Account.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabri/CLionProjects/Bank-System/Account.cpp -o CMakeFiles/Bank_System.dir/Account.cpp.s
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabri/Bank-System/Account.cpp -o CMakeFiles/Bank_System.dir/Account.cpp.s
 
 CMakeFiles/Bank_System.dir/AccountManager.cpp.o: CMakeFiles/Bank_System.dir/flags.make
 CMakeFiles/Bank_System.dir/AccountManager.cpp.o: ../AccountManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Bank_System.dir/AccountManager.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bank_System.dir/AccountManager.cpp.o -c /home/gabri/CLionProjects/Bank-System/AccountManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabri/Bank-System/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Bank_System.dir/AccountManager.cpp.o"
+	/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bank_System.dir/AccountManager.cpp.o -c /home/gabri/Bank-System/AccountManager.cpp
 
 CMakeFiles/Bank_System.dir/AccountManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Bank_System.dir/AccountManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabri/CLionProjects/Bank-System/AccountManager.cpp > CMakeFiles/Bank_System.dir/AccountManager.cpp.i
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabri/Bank-System/AccountManager.cpp > CMakeFiles/Bank_System.dir/AccountManager.cpp.i
 
 CMakeFiles/Bank_System.dir/AccountManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Bank_System.dir/AccountManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabri/CLionProjects/Bank-System/AccountManager.cpp -o CMakeFiles/Bank_System.dir/AccountManager.cpp.s
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabri/Bank-System/AccountManager.cpp -o CMakeFiles/Bank_System.dir/AccountManager.cpp.s
 
 CMakeFiles/Bank_System.dir/View.cpp.o: CMakeFiles/Bank_System.dir/flags.make
 CMakeFiles/Bank_System.dir/View.cpp.o: ../View.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Bank_System.dir/View.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bank_System.dir/View.cpp.o -c /home/gabri/CLionProjects/Bank-System/View.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabri/Bank-System/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Bank_System.dir/View.cpp.o"
+	/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bank_System.dir/View.cpp.o -c /home/gabri/Bank-System/View.cpp
 
 CMakeFiles/Bank_System.dir/View.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Bank_System.dir/View.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabri/CLionProjects/Bank-System/View.cpp > CMakeFiles/Bank_System.dir/View.cpp.i
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabri/Bank-System/View.cpp > CMakeFiles/Bank_System.dir/View.cpp.i
 
 CMakeFiles/Bank_System.dir/View.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Bank_System.dir/View.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabri/CLionProjects/Bank-System/View.cpp -o CMakeFiles/Bank_System.dir/View.cpp.s
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabri/Bank-System/View.cpp -o CMakeFiles/Bank_System.dir/View.cpp.s
+
+CMakeFiles/Bank_System.dir/Transaction.cpp.o: CMakeFiles/Bank_System.dir/flags.make
+CMakeFiles/Bank_System.dir/Transaction.cpp.o: ../Transaction.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabri/Bank-System/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Bank_System.dir/Transaction.cpp.o"
+	/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bank_System.dir/Transaction.cpp.o -c /home/gabri/Bank-System/Transaction.cpp
+
+CMakeFiles/Bank_System.dir/Transaction.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Bank_System.dir/Transaction.cpp.i"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabri/Bank-System/Transaction.cpp > CMakeFiles/Bank_System.dir/Transaction.cpp.i
+
+CMakeFiles/Bank_System.dir/Transaction.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Bank_System.dir/Transaction.cpp.s"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabri/Bank-System/Transaction.cpp -o CMakeFiles/Bank_System.dir/Transaction.cpp.s
 
 # Object files for target Bank_System
 Bank_System_OBJECTS = \
 "CMakeFiles/Bank_System.dir/main.cpp.o" \
 "CMakeFiles/Bank_System.dir/Account.cpp.o" \
 "CMakeFiles/Bank_System.dir/AccountManager.cpp.o" \
-"CMakeFiles/Bank_System.dir/View.cpp.o"
+"CMakeFiles/Bank_System.dir/View.cpp.o" \
+"CMakeFiles/Bank_System.dir/Transaction.cpp.o"
 
 # External object files for target Bank_System
 Bank_System_EXTERNAL_OBJECTS =
@@ -123,10 +137,11 @@ Bank_System: CMakeFiles/Bank_System.dir/main.cpp.o
 Bank_System: CMakeFiles/Bank_System.dir/Account.cpp.o
 Bank_System: CMakeFiles/Bank_System.dir/AccountManager.cpp.o
 Bank_System: CMakeFiles/Bank_System.dir/View.cpp.o
+Bank_System: CMakeFiles/Bank_System.dir/Transaction.cpp.o
 Bank_System: CMakeFiles/Bank_System.dir/build.make
 Bank_System: libcore.a
 Bank_System: CMakeFiles/Bank_System.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Bank_System"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gabri/Bank-System/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Bank_System"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Bank_System.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -139,6 +154,6 @@ CMakeFiles/Bank_System.dir/clean:
 .PHONY : CMakeFiles/Bank_System.dir/clean
 
 CMakeFiles/Bank_System.dir/depend:
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gabri/CLionProjects/Bank-System /home/gabri/CLionProjects/Bank-System /home/gabri/CLionProjects/Bank-System/cmake-build-debug /home/gabri/CLionProjects/Bank-System/cmake-build-debug /home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles/Bank_System.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gabri/Bank-System/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gabri/Bank-System /home/gabri/Bank-System /home/gabri/Bank-System/cmake-build-debug /home/gabri/Bank-System/cmake-build-debug /home/gabri/Bank-System/cmake-build-debug/CMakeFiles/Bank_System.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Bank_System.dir/depend
 

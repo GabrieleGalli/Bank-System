@@ -656,23 +656,23 @@ absl/debugging/symbolize.h
 absl/strings/str_cat.h
 ../Google_tests/lib/googletest/src/absl/strings/str_cat.h
 
-/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest/src/gtest-all.cc
+/home/gabri/Bank-System/Google_tests/lib/googletest/src/gtest-all.cc
 gtest/gtest.h
-/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest/src/gtest/gtest.h
+/home/gabri/Bank-System/Google_tests/lib/googletest/src/gtest/gtest.h
 src/gtest.cc
-/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest/src/src/gtest.cc
+/home/gabri/Bank-System/Google_tests/lib/googletest/src/src/gtest.cc
 src/gtest-death-test.cc
-/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest/src/src/gtest-death-test.cc
+/home/gabri/Bank-System/Google_tests/lib/googletest/src/src/gtest-death-test.cc
 src/gtest-filepath.cc
-/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest/src/src/gtest-filepath.cc
+/home/gabri/Bank-System/Google_tests/lib/googletest/src/src/gtest-filepath.cc
 src/gtest-matchers.cc
-/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest/src/src/gtest-matchers.cc
+/home/gabri/Bank-System/Google_tests/lib/googletest/src/src/gtest-matchers.cc
 src/gtest-port.cc
-/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest/src/src/gtest-port.cc
+/home/gabri/Bank-System/Google_tests/lib/googletest/src/src/gtest-port.cc
 src/gtest-printers.cc
-/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest/src/src/gtest-printers.cc
+/home/gabri/Bank-System/Google_tests/lib/googletest/src/src/gtest-printers.cc
 src/gtest-test-part.cc
-/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest/src/src/gtest-test-part.cc
+/home/gabri/Bank-System/Google_tests/lib/googletest/src/src/gtest-test-part.cc
 src/gtest-typed-test.cc
-/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest/src/src/gtest-typed-test.cc
+/home/gabri/Bank-System/Google_tests/lib/googletest/src/src/gtest-typed-test.cc
 

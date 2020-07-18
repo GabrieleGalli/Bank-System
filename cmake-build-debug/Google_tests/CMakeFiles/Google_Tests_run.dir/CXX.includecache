@@ -326,29 +326,33 @@ cxxabi.h
 acxx_demangle.h
 -
 
-/home/gabri/CLionProjects/Bank-System/Account.h
+/home/gabri/Bank-System/Account.h
 FileStructure.h
-/home/gabri/CLionProjects/Bank-System/FileStructure.h
+/home/gabri/Bank-System/FileStructure.h
+Transaction.h
+/home/gabri/Bank-System/Transaction.h
 list
 -
 map
 -
 
-/home/gabri/CLionProjects/Bank-System/AccountManager.h
+/home/gabri/Bank-System/AccountManager.h
 Account.h
-/home/gabri/CLionProjects/Bank-System/Account.h
+/home/gabri/Bank-System/Account.h
 
-/home/gabri/CLionProjects/Bank-System/FileStructure.h
+/home/gabri/Bank-System/FileStructure.h
 cstring
 -
 
-/home/gabri/CLionProjects/Bank-System/Google_tests/AccountManager_TEST.cpp
+/home/gabri/Bank-System/Google_tests/AccountManager_TEST.cpp
 gtest/gtest.h
-/home/gabri/CLionProjects/Bank-System/Google_tests/gtest/gtest.h
+/home/gabri/Bank-System/Google_tests/gtest/gtest.h
 ../AccountManager.h
-/home/gabri/CLionProjects/Bank-System/AccountManager.h
+/home/gabri/Bank-System/AccountManager.h
 
-/home/gabri/CLionProjects/Bank-System/Google_tests/runAllTests.cpp
-gtest/gtest.h
-/home/gabri/CLionProjects/Bank-System/Google_tests/gtest/gtest.h
+/home/gabri/Bank-System/Transaction.h
+FileStructure.h
+/home/gabri/Bank-System/FileStructure.h
+ctime
+-
 

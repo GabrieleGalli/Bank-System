@@ -6,25 +6,57 @@
 
 #IncludeRegexTransform: 
 
-/home/gabri/CLionProjects/Bank-System/Account.h
+/home/gabri/Bank-System/Account.cpp
+iostream
+-
+Account.h
+/home/gabri/Bank-System/Account.h
+
+/home/gabri/Bank-System/Account.h
 FileStructure.h
-/home/gabri/CLionProjects/Bank-System/FileStructure.h
+/home/gabri/Bank-System/FileStructure.h
+Transaction.h
+/home/gabri/Bank-System/Transaction.h
 list
 -
 map
 -
 
-/home/gabri/CLionProjects/Bank-System/AccountManager.cpp
+/home/gabri/Bank-System/AccountManager.cpp
 iostream
 -
 AccountManager.h
-/home/gabri/CLionProjects/Bank-System/AccountManager.h
+/home/gabri/Bank-System/AccountManager.h
 
-/home/gabri/CLionProjects/Bank-System/AccountManager.h
+/home/gabri/Bank-System/AccountManager.h
 Account.h
-/home/gabri/CLionProjects/Bank-System/Account.h
+/home/gabri/Bank-System/Account.h
 
-/home/gabri/CLionProjects/Bank-System/FileStructure.h
+/home/gabri/Bank-System/FileStructure.h
 cstring
 -
+
+/home/gabri/Bank-System/Transaction.h
+FileStructure.h
+/home/gabri/Bank-System/FileStructure.h
+ctime
+-
+
+/home/gabri/Bank-System/View.cpp
+View.h
+/home/gabri/Bank-System/View.h
+iostream
+-
+
+/home/gabri/Bank-System/View.h
+AccountManager.h
+/home/gabri/Bank-System/AccountManager.h
+
+/home/gabri/Bank-System/main.cpp
+iostream
+-
+AccountManager.h
+/home/gabri/Bank-System/AccountManager.h
+View.h
+/home/gabri/Bank-System/View.h
 

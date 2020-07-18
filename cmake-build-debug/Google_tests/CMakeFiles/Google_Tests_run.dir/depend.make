@@ -25,6 +25,7 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.o: ../Accou
 Google_tests/CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.o: ../AccountManager.h
 Google_tests/CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.o: ../FileStructure.h
 Google_tests/CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.o: ../Google_tests/AccountManager_TEST.cpp
+Google_tests/CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.o: ../Transaction.h
 
 Google_tests/CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.o: ../Google_tests/lib/googletest/include/gtest/gtest-death-test.h
 Google_tests/CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.o: ../Google_tests/lib/googletest/include/gtest/gtest-matchers.h

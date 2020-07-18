@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/114/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/114/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gabri/CLionProjects/Bank-System
+CMAKE_SOURCE_DIR = /home/gabri/Bank-System
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gabri/CLionProjects/Bank-System/cmake-build-debug
+CMAKE_BINARY_DIR = /home/gabri/Bank-System/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,31 +59,31 @@ CMAKE_BINARY_DIR = /home/gabri/CLionProjects/Bank-System/cmake-build-debug
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/snap/clion/114/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/snap/clion/114/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/snap/clion/114/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/snap/clion/114/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/114/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -94,7 +94,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/114/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -115,25 +115,25 @@ list_install_components/fast: list_install_components
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/snap/clion/114/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+	/home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/snap/clion/114/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+	/home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles /home/gabri/CLionProjects/Bank-System/cmake-build-debug/Google_tests/lib/CMakeFiles/progress.marks
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 Google_tests/lib/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles 0
+	cd /home/gabri/Bank-System/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/Bank-System/cmake-build-debug/CMakeFiles /home/gabri/Bank-System/cmake-build-debug/Google_tests/lib/CMakeFiles/progress.marks
+	cd /home/gabri/Bank-System/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 Google_tests/lib/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/Bank-System/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 Google_tests/lib/clean
+	cd /home/gabri/Bank-System/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 Google_tests/lib/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,17 +143,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 Google_tests/lib/preinstall
+	cd /home/gabri/Bank-System/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 Google_tests/lib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 Google_tests/lib/preinstall
+	cd /home/gabri/Bank-System/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 Google_tests/lib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/gabri/Bank-System/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -179,6 +179,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/gabri/CLionProjects/Bank-System/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/gabri/Bank-System/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

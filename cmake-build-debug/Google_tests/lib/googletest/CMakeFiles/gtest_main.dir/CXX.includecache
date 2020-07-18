@@ -326,9 +326,9 @@ cxxabi.h
 acxx_demangle.h
 -
 
-/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest/src/gtest_main.cc
+/home/gabri/Bank-System/Google_tests/lib/googletest/src/gtest_main.cc
 cstdio
 -
 gtest/gtest.h
-/home/gabri/CLionProjects/Bank-System/Google_tests/lib/googletest/src/gtest/gtest.h
+/home/gabri/Bank-System/Google_tests/lib/googletest/src/gtest/gtest.h
 

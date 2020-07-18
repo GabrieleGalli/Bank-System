@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/core.dir/Account.cpp.o"
   "CMakeFiles/core.dir/AccountManager.cpp.o"
+  "CMakeFiles/core.dir/Transaction.cpp.o"
   "CMakeFiles/core.dir/View.cpp.o"
   "CMakeFiles/core.dir/main.cpp.o"
   "libcore.a"

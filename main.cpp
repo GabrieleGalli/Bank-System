@@ -3,8 +3,8 @@
 #include "View.h"
 
 int main() {
-    auto am = new(AccountManager);
-    View view(am);
+    AccountManager am;
+    View view(&am);
     view.Show(true);
 
     return 0;

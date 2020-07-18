@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/114/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/114/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gabri/CLionProjects/Bank-System
+CMAKE_SOURCE_DIR = /home/gabri/Bank-System
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gabri/CLionProjects/Bank-System/cmake-build-debug
+CMAKE_BINARY_DIR = /home/gabri/Bank-System/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,37 +59,37 @@ CMAKE_BINARY_DIR = /home/gabri/CLionProjects/Bank-System/cmake-build-debug
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/snap/clion/114/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/snap/clion/114/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/snap/clion/114/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/snap/clion/114/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/snap/clion/114/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+	/home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/snap/clion/114/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+	/home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target list_install_components
@@ -105,7 +105,7 @@ list_install_components/fast: list_install_components
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/114/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -116,7 +116,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/114/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/gabri/ProgramFiles/clion-2020.1.2/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -126,9 +126,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles /home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/Bank-System/cmake-build-debug/CMakeFiles /home/gabri/Bank-System/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/CLionProjects/Bank-System/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabri/Bank-System/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -307,6 +307,36 @@ AccountManager.cpp.s:
 	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/AccountManager.cpp.s
 .PHONY : AccountManager.cpp.s
 
+Transaction.o: Transaction.cpp.o
+
+.PHONY : Transaction.o
+
+# target to build an object file
+Transaction.cpp.o:
+	$(MAKE) -f CMakeFiles/Bank_System.dir/build.make CMakeFiles/Bank_System.dir/Transaction.cpp.o
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Transaction.cpp.o
+.PHONY : Transaction.cpp.o
+
+Transaction.i: Transaction.cpp.i
+
+.PHONY : Transaction.i
+
+# target to preprocess a source file
+Transaction.cpp.i:
+	$(MAKE) -f CMakeFiles/Bank_System.dir/build.make CMakeFiles/Bank_System.dir/Transaction.cpp.i
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Transaction.cpp.i
+.PHONY : Transaction.cpp.i
+
+Transaction.s: Transaction.cpp.s
+
+.PHONY : Transaction.s
+
+# target to generate assembly for a file
+Transaction.cpp.s:
+	$(MAKE) -f CMakeFiles/Bank_System.dir/build.make CMakeFiles/Bank_System.dir/Transaction.cpp.s
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Transaction.cpp.s
+.PHONY : Transaction.cpp.s
+
 View.o: View.cpp.o
 
 .PHONY : View.o
@@ -392,6 +422,9 @@ help:
 	@echo "... AccountManager.o"
 	@echo "... AccountManager.i"
 	@echo "... AccountManager.s"
+	@echo "... Transaction.o"
+	@echo "... Transaction.i"
+	@echo "... Transaction.s"
 	@echo "... View.o"
 	@echo "... View.i"
 	@echo "... View.s"
