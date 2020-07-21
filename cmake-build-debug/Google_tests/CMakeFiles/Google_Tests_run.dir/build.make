@@ -70,29 +70,29 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.s"
 	cd /home/gabri/Bank-System/cmake-build-debug/Google_tests && /bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabri/Bank-System/Google_tests/runAllTests.cpp -o CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.s
 
-Google_tests/CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.o: Google_tests/CMakeFiles/Google_Tests_run.dir/flags.make
-Google_tests/CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.o: ../Google_tests/AccountManager_TEST.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabri/Bank-System/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Google_tests/CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.o"
-	cd /home/gabri/Bank-System/cmake-build-debug/Google_tests && /bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.o -c /home/gabri/Bank-System/Google_tests/AccountManager_TEST.cpp
+Google_tests/CMakeFiles/Google_Tests_run.dir/TESTS.cpp.o: Google_tests/CMakeFiles/Google_Tests_run.dir/flags.make
+Google_tests/CMakeFiles/Google_Tests_run.dir/TESTS.cpp.o: ../Google_tests/TESTS.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabri/Bank-System/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Google_tests/CMakeFiles/Google_Tests_run.dir/TESTS.cpp.o"
+	cd /home/gabri/Bank-System/cmake-build-debug/Google_tests && /bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Google_Tests_run.dir/TESTS.cpp.o -c /home/gabri/Bank-System/Google_tests/TESTS.cpp
 
-Google_tests/CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.i"
-	cd /home/gabri/Bank-System/cmake-build-debug/Google_tests && /bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabri/Bank-System/Google_tests/AccountManager_TEST.cpp > CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.i
+Google_tests/CMakeFiles/Google_Tests_run.dir/TESTS.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Google_Tests_run.dir/TESTS.cpp.i"
+	cd /home/gabri/Bank-System/cmake-build-debug/Google_tests && /bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabri/Bank-System/Google_tests/TESTS.cpp > CMakeFiles/Google_Tests_run.dir/TESTS.cpp.i
 
-Google_tests/CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.s"
-	cd /home/gabri/Bank-System/cmake-build-debug/Google_tests && /bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabri/Bank-System/Google_tests/AccountManager_TEST.cpp -o CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.s
+Google_tests/CMakeFiles/Google_Tests_run.dir/TESTS.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Google_Tests_run.dir/TESTS.cpp.s"
+	cd /home/gabri/Bank-System/cmake-build-debug/Google_tests && /bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabri/Bank-System/Google_tests/TESTS.cpp -o CMakeFiles/Google_Tests_run.dir/TESTS.cpp.s
 
 # Object files for target Google_Tests_run
 Google_Tests_run_OBJECTS = \
 "CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.o" \
-"CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.o"
+"CMakeFiles/Google_Tests_run.dir/TESTS.cpp.o"
 
 # External object files for target Google_Tests_run
 Google_Tests_run_EXTERNAL_OBJECTS =
 
 Google_tests/Google_Tests_run: Google_tests/CMakeFiles/Google_Tests_run.dir/runAllTests.cpp.o
-Google_tests/Google_Tests_run: Google_tests/CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.o
+Google_tests/Google_Tests_run: Google_tests/CMakeFiles/Google_Tests_run.dir/TESTS.cpp.o
 Google_tests/Google_Tests_run: Google_tests/CMakeFiles/Google_Tests_run.dir/build.make
 Google_tests/Google_Tests_run: lib/libgtestd.a
 Google_tests/Google_Tests_run: lib/libgtest_maind.a

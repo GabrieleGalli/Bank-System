@@ -270,7 +270,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/gabri/Bank-System/Google_tests/AccountManager_TEST.cpp">
+		<Unit filename="/home/gabri/Bank-System/Google_tests/TESTS.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>
 		<Unit filename="/home/gabri/Bank-System/Google_tests/lib/googlemock/src/gmock-all.cc">

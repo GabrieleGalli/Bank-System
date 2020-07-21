@@ -25,7 +25,7 @@ public:
 
 
     // GET
-    int GetNewID();                                                                                               //test
+    int CreateNewID();                                                                                               //test
     int GetNumAccounts() const { return _accounts.size(); }
     static void GetFileName(Account *account, std::string& fileName);                                             //test
     std::list<Account *> GetAccounts() { return _accounts; }                                                      //test

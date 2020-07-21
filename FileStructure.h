@@ -20,7 +20,7 @@ enum TRANS_CODE {
     Transfer_OUT
 };
 
-typedef struct Account_struct {
+struct ACCOUNT_INFO {
     size_t size;
     int ID;
     char Name[50];
@@ -32,7 +32,7 @@ typedef struct Account_struct {
     double Amount;
 
     void Clear() {
-        size = sizeof(Account_struct);
+        size = sizeof(ACCOUNT_INFO);
         ID = 0;
         strcpy(Name,       "");
         strcpy(Surname,    "");
@@ -41,9 +41,9 @@ typedef struct Account_struct {
         strcpy(Citizen,    "");
         strcpy(Password,   "");
     }
-} ACCOUNT_INFO;
+};
 
-typedef struct Transaction_struct {
+struct TRANS_INFO {
     size_t size;
     TRANS_CODE Code;
     int    Day;
@@ -54,7 +54,7 @@ typedef struct Transaction_struct {
     int    fromID;
     int    toID;
     void Clear() {
-        size   = sizeof(Transaction_struct);
+        size   = sizeof(TRANS_INFO);
         Code   = None;
         Day    = 0;
         Month  = 0;
@@ -64,6 +64,6 @@ typedef struct Transaction_struct {
         fromID = 0;
         toID   = 0;
     }
-} TRANS_INFO;
+};
 
 #endif //BANK_SYSTEM_FILESTRUCTURE_H

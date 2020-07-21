@@ -434,11 +434,19 @@
 			<Option target="Bank_System"/>
 			<Option target="core"/>
 		</Unit>
+		<Unit filename="/home/gabri/Bank-System/Date.cpp">
+			<Option target="Bank_System"/>
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/gabri/Bank-System/Date.h">
+			<Option target="Bank_System"/>
+			<Option target="core"/>
+		</Unit>
 		<Unit filename="/home/gabri/Bank-System/FileStructure.h">
 			<Option target="Bank_System"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/gabri/Bank-System/Google_tests/AccountManager_TEST.cpp">
+		<Unit filename="/home/gabri/Bank-System/Google_tests/TESTS.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>
 		<Unit filename="/home/gabri/Bank-System/Google_tests/lib/googlemock/src/gmock-all.cc">

@@ -122,13 +122,27 @@ CMakeFiles/core.dir/Transaction.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Transaction.cpp.s"
 	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabri/Bank-System/Transaction.cpp -o CMakeFiles/core.dir/Transaction.cpp.s
 
+CMakeFiles/core.dir/Date.cpp.o: CMakeFiles/core.dir/flags.make
+CMakeFiles/core.dir/Date.cpp.o: ../Date.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabri/Bank-System/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/core.dir/Date.cpp.o"
+	/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Date.cpp.o -c /home/gabri/Bank-System/Date.cpp
+
+CMakeFiles/core.dir/Date.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/Date.cpp.i"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabri/Bank-System/Date.cpp > CMakeFiles/core.dir/Date.cpp.i
+
+CMakeFiles/core.dir/Date.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Date.cpp.s"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabri/Bank-System/Date.cpp -o CMakeFiles/core.dir/Date.cpp.s
+
 # Object files for target core
 core_OBJECTS = \
 "CMakeFiles/core.dir/main.cpp.o" \
 "CMakeFiles/core.dir/Account.cpp.o" \
 "CMakeFiles/core.dir/AccountManager.cpp.o" \
 "CMakeFiles/core.dir/View.cpp.o" \
-"CMakeFiles/core.dir/Transaction.cpp.o"
+"CMakeFiles/core.dir/Transaction.cpp.o" \
+"CMakeFiles/core.dir/Date.cpp.o"
 
 # External object files for target core
 core_EXTERNAL_OBJECTS =
@@ -138,9 +152,10 @@ libcore.a: CMakeFiles/core.dir/Account.cpp.o
 libcore.a: CMakeFiles/core.dir/AccountManager.cpp.o
 libcore.a: CMakeFiles/core.dir/View.cpp.o
 libcore.a: CMakeFiles/core.dir/Transaction.cpp.o
+libcore.a: CMakeFiles/core.dir/Date.cpp.o
 libcore.a: CMakeFiles/core.dir/build.make
 libcore.a: CMakeFiles/core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gabri/Bank-System/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libcore.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gabri/Bank-System/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libcore.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/core.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/core.dir/link.txt --verbose=$(VERBOSE)
 

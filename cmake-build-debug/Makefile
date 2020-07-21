@@ -307,6 +307,36 @@ AccountManager.cpp.s:
 	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/AccountManager.cpp.s
 .PHONY : AccountManager.cpp.s
 
+Date.o: Date.cpp.o
+
+.PHONY : Date.o
+
+# target to build an object file
+Date.cpp.o:
+	$(MAKE) -f CMakeFiles/Bank_System.dir/build.make CMakeFiles/Bank_System.dir/Date.cpp.o
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Date.cpp.o
+.PHONY : Date.cpp.o
+
+Date.i: Date.cpp.i
+
+.PHONY : Date.i
+
+# target to preprocess a source file
+Date.cpp.i:
+	$(MAKE) -f CMakeFiles/Bank_System.dir/build.make CMakeFiles/Bank_System.dir/Date.cpp.i
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Date.cpp.i
+.PHONY : Date.cpp.i
+
+Date.s: Date.cpp.s
+
+.PHONY : Date.s
+
+# target to generate assembly for a file
+Date.cpp.s:
+	$(MAKE) -f CMakeFiles/Bank_System.dir/build.make CMakeFiles/Bank_System.dir/Date.cpp.s
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Date.cpp.s
+.PHONY : Date.cpp.s
+
 Transaction.o: Transaction.cpp.o
 
 .PHONY : Transaction.o
@@ -422,6 +452,9 @@ help:
 	@echo "... AccountManager.o"
 	@echo "... AccountManager.i"
 	@echo "... AccountManager.s"
+	@echo "... Date.o"
+	@echo "... Date.i"
+	@echo "... Date.s"
 	@echo "... Transaction.o"
 	@echo "... Transaction.i"
 	@echo "... Transaction.s"

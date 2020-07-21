@@ -344,7 +344,7 @@ Account.h
 cstring
 -
 
-/home/gabri/Bank-System/Google_tests/AccountManager_TEST.cpp
+/home/gabri/Bank-System/Google_tests/TESTS.cpp
 gtest/gtest.h
 /home/gabri/Bank-System/Google_tests/gtest/gtest.h
 ../AccountManager.h

@@ -56,7 +56,7 @@ TEST(AccountManager, Test_CheckValidID) {
 }
 
 TEST(AccountManager, Test_GetNewID) {
-    int  newID = am.GetNewID();
+    int  newID = am.CreateNewID();
     auto list = am.GetAccounts();
     for (auto a : list) {
         bool isEqual = false;

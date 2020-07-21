@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/gabri/Bank-System/Account.cpp" "/home/gabri/Bank-System/cmake-build-debug/CMakeFiles/Bank_System.dir/Account.cpp.o"
   "/home/gabri/Bank-System/AccountManager.cpp" "/home/gabri/Bank-System/cmake-build-debug/CMakeFiles/Bank_System.dir/AccountManager.cpp.o"
+  "/home/gabri/Bank-System/Date.cpp" "/home/gabri/Bank-System/cmake-build-debug/CMakeFiles/Bank_System.dir/Date.cpp.o"
   "/home/gabri/Bank-System/Transaction.cpp" "/home/gabri/Bank-System/cmake-build-debug/CMakeFiles/Bank_System.dir/Transaction.cpp.o"
   "/home/gabri/Bank-System/View.cpp" "/home/gabri/Bank-System/cmake-build-debug/CMakeFiles/Bank_System.dir/View.cpp.o"
   "/home/gabri/Bank-System/main.cpp" "/home/gabri/Bank-System/cmake-build-debug/CMakeFiles/Bank_System.dir/main.cpp.o"

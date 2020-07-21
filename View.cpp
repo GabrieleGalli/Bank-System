@@ -17,7 +17,7 @@ bool IsUINT_Number(string strNum) {
     if (iNumChars == 0)
         return false;
 
-    return not((iNumChars > 1) && (strNum[0] == '0'));
+    return not((iNumChars > 1) and (strNum[0] == '0'));
 }
 
 void View::Show(bool visible) {
@@ -79,8 +79,10 @@ void View::Show(bool visible) {
                             //Deposit
                             cout << "How much to deposit?" << endl;
                             cin >> amount;
-                            if (amount > 0)
+                            if (amount > 0) {
                                 AccountManager::Deposit(account, amount);
+                                cout << amount << "$ deposited in your account" << std::endl;
+                            }
                             else
                                 cout << "Impossible to deposit 0$." << endl;
                             break;
@@ -90,12 +92,14 @@ void View::Show(bool visible) {
                             cout << "How much money to withdraw?" << endl;
                             cin >> amount;
                             if (amount > 0)
-                                if (AccountManager::Withdrawal(account, amount))
+                                if (AccountManager::Withdrawal(account, amount)) {
                                     balance -= amount;
+                                    cout << amount << "$ withdrawn from your account." << std::endl;
+                                }
                                 else
-                                    cout << "You have not enough money." << endl;
+                                    cerr << "You have not enough money." << endl;
                             else
-                                cout << "Impossible to withdrawal 0$." << endl;
+                                cerr << "Impossible to withdrawal 0$." << endl;
                             break;
                         }
                         case 3: {
@@ -107,13 +111,22 @@ void View::Show(bool visible) {
                                 cout << "How much Transfer to " << toID << "?" << endl;
                                 cin >> amount;
                                 if (amount > 0) {
-                                    _accountManager->MakeInternalTransaction(account->GetID(), toID, amount);
-                                    balance -= amount;
-                                    cout << "Done! " << amount << "$ transferred to " << toID << ". " << endl;
+                                    bool transSuccess = false;
+                                    try {
+                                        transSuccess = _accountManager->MakeInternalTransaction(account->GetID(), toID, amount);
+                                    } catch (std::invalid_argument& e) {
+                                        cerr << e.what();
+                                        break;
+                                    }
+                                    if (transSuccess) {
+                                        balance -= amount;
+                                        cout << "Done! " << amount << "$ transferred to " << toID << ". " << endl;
+                                    } else
+                                        cerr << "Transaction Error" << endl;
                                 } else
-                                    cout << "Invalid amount value." << endl;
+                                    cerr << "Invalid amount value." << endl;
                             } else
-                                cout << "This is not a valid ID." << endl;
+                                cerr << "This is not a valid ID." << endl;
                             break;
                         }
                         case 4:
@@ -123,7 +136,7 @@ void View::Show(bool visible) {
                             break;
                     }
                 } else {
-                    cout << "Incorrect ID or Password." << std::endl;
+                    cerr << "Incorrect ID or Password." << std::endl;
                     break;
                 }
                 break;

@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include "AccountManager.h"
+#include <exception>
 
 //**********************************************************************************************************************
 // BASIC OPERATIONS *
@@ -26,7 +27,7 @@ bool AccountManager::CreateNewAccount(const std::string& name, const std::string
         return false;
     if (not acc->SetPassword(pass))
         return false;
-    if (not acc->SetID(GetNewID()))
+    if (not acc->SetID(CreateNewID()))
         return false;
 
     if (not _accounts.empty()) {
@@ -119,7 +120,7 @@ bool AccountManager::CheckValidPassword(int ID, const std::string& pass) {
 //******
 //----------------------------------------------------------------------------------------------------------------------
 
-int AccountManager::GetNewID() {
+int AccountManager::CreateNewID() {
     // Ensures that the new account receives an unique ID.
     int newID = GetNumAccounts() + 1;
     for (auto &account : _accounts) {
@@ -298,15 +299,13 @@ bool AccountManager::MakeInternalTransaction(int fromID, int toID, double amount
     if (src == nullptr or dst == nullptr)
         return false;
 
-    if (src->GetAmount() < amount) {
-        std::cout << "You don't have enough money in your account to make a transfer" << std::endl;
-        return false;
-    }
+    if (src->GetAmount() < amount)
+        throw std::invalid_argument("You don't have enough money in your account to make a transfer");
 
     bool isSuccess = true;
 
     auto *ptr_src = new Transaction;
-    if (not ptr_src->IsValidDate())
+    if (not ptr_src->GetDate().IsValidDate())
         isSuccess = false;
     if (not ptr_src->SetTRANSCODE(Transfer_OUT))
         isSuccess = false;
@@ -325,11 +324,11 @@ bool AccountManager::MakeInternalTransaction(int fromID, int toID, double amount
 
     auto *ptr_dst = new Transaction;
     // Set date from src
-    if (not ptr_dst->SetDay(ptr_src->GetDay()))
+    if (not ptr_dst->GetDate().SetDay(ptr_src->GetDate().GetDay()))
         isSuccess = false;
-    if (not ptr_dst->SetMonth(ptr_src->GetMonth()))
+    if (not ptr_dst->GetDate().SetMonth(ptr_src->GetDate().GetMonth()))
         isSuccess = false;
-    if (not ptr_dst->SetYear(ptr_src->GetYear()))
+    if (not ptr_dst->GetDate().SetYear(ptr_src->GetDate().GetYear()))
         isSuccess = false;
     // fromID gives this date
     if (not ptr_dst->SetTRANSCODE(Transfer_IN))
@@ -400,7 +399,7 @@ bool AccountManager::Deposit(Account *account, double amount) {
     std::string fileName;
     auto tlist = account->GetTransactions();
     auto *ptr = new Transaction;
-    if (not ptr->IsValidDate())
+    if (not ptr->GetDate().IsValidDate())
         isSuccess = false;
     if (not ptr->SetTRANSCODE(Deposit_code))
         isSuccess = false;
@@ -416,7 +415,6 @@ bool AccountManager::Deposit(Account *account, double amount) {
         if (not WriteTransactionToFile(fileName, ptr))
             isSuccess = false;
         else {
-            std::cout << amount << " deposited in your account" << std::endl;
             tlist->push_back(ptr);
             account->UpdateAmount(amount);
             isSuccess = true;
@@ -455,7 +453,7 @@ bool AccountManager::Withdrawal(Account *account, double amount) {
         std::string fileName;
         auto tlist = account->GetTransactions();
         auto *ptr = new Transaction;
-        if (not ptr->IsValidDate())
+        if (not ptr->GetDate().IsValidDate())
             isSuccess = false;
         if (not ptr->SetTRANSCODE(Withdrawal_Code))
             isSuccess = false;
@@ -471,7 +469,6 @@ bool AccountManager::Withdrawal(Account *account, double amount) {
             if (not WriteTransactionToFile(fileName, ptr))
                 isSuccess = false;
             else {
-                std::cout << amount << " withdrawn from your account." << std::endl;
                 tlist->push_back(ptr);
                 account->UpdateAmount(-amount);
                 isSuccess = true;

@@ -171,32 +171,32 @@ Google_Tests_run/fast:
 	cd /home/gabri/Bank-System/cmake-build-debug && $(MAKE) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/build
 .PHONY : Google_Tests_run/fast
 
-AccountManager_TEST.o: AccountManager_TEST.cpp.o
+TESTS.o: TESTS.cpp.o
 
-.PHONY : AccountManager_TEST.o
+.PHONY : TESTS.o
 
 # target to build an object file
-AccountManager_TEST.cpp.o:
-	cd /home/gabri/Bank-System/cmake-build-debug && $(MAKE) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.o
-.PHONY : AccountManager_TEST.cpp.o
+TESTS.cpp.o:
+	cd /home/gabri/Bank-System/cmake-build-debug && $(MAKE) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/TESTS.cpp.o
+.PHONY : TESTS.cpp.o
 
-AccountManager_TEST.i: AccountManager_TEST.cpp.i
+TESTS.i: TESTS.cpp.i
 
-.PHONY : AccountManager_TEST.i
+.PHONY : TESTS.i
 
 # target to preprocess a source file
-AccountManager_TEST.cpp.i:
-	cd /home/gabri/Bank-System/cmake-build-debug && $(MAKE) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.i
-.PHONY : AccountManager_TEST.cpp.i
+TESTS.cpp.i:
+	cd /home/gabri/Bank-System/cmake-build-debug && $(MAKE) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/TESTS.cpp.i
+.PHONY : TESTS.cpp.i
 
-AccountManager_TEST.s: AccountManager_TEST.cpp.s
+TESTS.s: TESTS.cpp.s
 
-.PHONY : AccountManager_TEST.s
+.PHONY : TESTS.s
 
 # target to generate assembly for a file
-AccountManager_TEST.cpp.s:
-	cd /home/gabri/Bank-System/cmake-build-debug && $(MAKE) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/AccountManager_TEST.cpp.s
-.PHONY : AccountManager_TEST.cpp.s
+TESTS.cpp.s:
+	cd /home/gabri/Bank-System/cmake-build-debug && $(MAKE) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/TESTS.cpp.s
+.PHONY : TESTS.cpp.s
 
 runAllTests.o: runAllTests.cpp.o
 
@@ -238,9 +238,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... AccountManager_TEST.o"
-	@echo "... AccountManager_TEST.i"
-	@echo "... AccountManager_TEST.s"
+	@echo "... TESTS.o"
+	@echo "... TESTS.i"
+	@echo "... TESTS.s"
 	@echo "... runAllTests.o"
 	@echo "... runAllTests.i"
 	@echo "... runAllTests.s"
