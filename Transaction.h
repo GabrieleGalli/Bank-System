@@ -12,13 +12,19 @@
 class Transaction {
 private:
     TRANS_INFO _transInfo{};
-    Date _date{};
     void CloneTransInfo(const TRANS_INFO& info) { _transInfo = info; }
 
 public:
     Transaction() {
         _transInfo.Clear();
-        _date = Date(&_transInfo);
+        Date::GetDate(&_transInfo);
+    }
+    explicit Transaction(Transaction* src_trans) {
+        auto ti = GetTransInfo_ptr();
+        ti->Day = src_trans->GetDay();
+        ti->Month = src_trans->GetMonth();
+        ti->Year  = src_trans->GetYear();
+        ti->isValidData = src_trans->IsValidDate();
     }
 
     explicit Transaction(const TRANS_INFO& info) {
@@ -33,14 +39,14 @@ public:
     bool SetToID(int toID);                                                                                       //test
     TRANS_CODE GetTRANSCODE() const;
 
+    bool IsValidDate() const;
+
     int  GetDay()      const;                                                                                     //test
     int  GetMonth()    const;                                                                                     //test
     int  GetYear()     const;                                                                                     //test
     double GetAmount() const;                                                                                     //test
     int GetFromID()    const;                                                                                     //test
     int GetToID()      const;                                                                                     //test
-
-    Date GetDate() const;
 };
 
 #endif //BANK_SYSTEM_TRANSACTION_H

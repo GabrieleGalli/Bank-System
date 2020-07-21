@@ -81,7 +81,7 @@ void View::Show(bool visible) {
                             cin >> amount;
                             if (amount > 0) {
                                 AccountManager::Deposit(account, amount);
-                                cout << amount << "$ deposited in your account" << std::endl;
+                                cout << amount << "$ deposited in your account." << std::endl;
                             }
                             else
                                 cout << "Impossible to deposit 0$." << endl;
@@ -122,7 +122,7 @@ void View::Show(bool visible) {
                                         balance -= amount;
                                         cout << "Done! " << amount << "$ transferred to " << toID << ". " << endl;
                                     } else
-                                        cerr << "Transaction Error" << endl;
+                                        cerr << "Transaction Error." << endl;
                                 } else
                                     cerr << "Invalid amount value." << endl;
                             } else

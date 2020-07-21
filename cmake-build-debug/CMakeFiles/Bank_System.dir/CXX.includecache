@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/gabri/Bank-System/Account.cpp
+iostream
+-
+Account.h
+/home/gabri/Bank-System/Account.h
+
 /home/gabri/Bank-System/Account.h
 FileStructure.h
 /home/gabri/Bank-System/FileStructure.h
@@ -28,6 +34,14 @@ exception
 Account.h
 /home/gabri/Bank-System/Account.h
 
+/home/gabri/Bank-System/Date.cpp
+Date.h
+/home/gabri/Bank-System/Date.h
+exception
+-
+stdexcept
+-
+
 /home/gabri/Bank-System/Date.h
 ctime
 -
@@ -37,6 +51,10 @@ FileStructure.h
 /home/gabri/Bank-System/FileStructure.h
 cstring
 -
+
+/home/gabri/Bank-System/Transaction.cpp
+Transaction.h
+/home/gabri/Bank-System/Transaction.h
 
 /home/gabri/Bank-System/Transaction.h
 FileStructure.h
@@ -55,4 +73,12 @@ iostream
 /home/gabri/Bank-System/View.h
 AccountManager.h
 /home/gabri/Bank-System/AccountManager.h
+
+/home/gabri/Bank-System/main.cpp
+iostream
+-
+AccountManager.h
+/home/gabri/Bank-System/AccountManager.h
+View.h
+/home/gabri/Bank-System/View.h
 

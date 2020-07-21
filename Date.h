@@ -9,24 +9,27 @@
 #include "FileStructure.h"
 
 class Date {
-private:
-    TRANS_INFO* _transInfo;
-
 public:
-    Date() = default;
-    explicit Date(TRANS_INFO* _transInfo);
+    static bool GetDate(TRANS_INFO* transInfo) {
+        time_t t = time(nullptr);
+        if (t == -1) {
+            transInfo->isValidData = false;
+            return false;
+        }
 
-    static bool IsBissextile(int year) ;
+        tm *timePtr = localtime(&t);
+        if (timePtr == nullptr) {
+            transInfo->isValidData = false;
+            return false;
+        }
 
-    bool SetDay(int day);                                                                                         //test
-    bool SetMonth (int month);                                                                                    //test
-    bool SetYear(int year);                                                                                       //test
+        transInfo->Day   = timePtr->tm_mday;
+        transInfo->Month = timePtr->tm_mon + 1;
+        transInfo->Year  = 1900 + timePtr->tm_year;
 
-    int  GetDay()      const;                                                                                     //test
-    int  GetMonth()    const;                                                                                     //test
-    int  GetYear()     const;                                                                                     //test
-
-    bool IsValidDate() const;
+        transInfo->isValidData = true;
+        return true;
+    }
 };
 
 

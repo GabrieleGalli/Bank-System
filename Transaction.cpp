@@ -46,6 +46,6 @@ int Transaction::GetToID() const {
     return _transInfo.toID;
 }
 
-Date Transaction::GetDate() const {
-    return _date;
+bool Transaction::IsValidDate() const {
+    return _transInfo.isValidData;
 }

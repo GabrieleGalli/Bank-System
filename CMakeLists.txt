@@ -5,7 +5,7 @@ project(${PROJECT_NAME})
 set(CMAKE_CXX_STANDARD 14)
 
 
-set(SOURCE_FILES main.cpp Account.cpp Account.h FileStructure.h AccountManager.cpp AccountManager.h View.cpp View.h Transaction.cpp Transaction.h Date.cpp Date.h)
+set(SOURCE_FILES main.cpp Account.cpp Account.h FileStructure.h AccountManager.cpp AccountManager.h View.cpp View.h Transaction.cpp Transaction.h Date.h)
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 

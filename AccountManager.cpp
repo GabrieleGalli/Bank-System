@@ -300,12 +300,12 @@ bool AccountManager::MakeInternalTransaction(int fromID, int toID, double amount
         return false;
 
     if (src->GetAmount() < amount)
-        throw std::invalid_argument("You don't have enough money in your account to make a transfer");
+        throw std::invalid_argument("You don't have enough money in your account to make a transfer.");
 
     bool isSuccess = true;
 
     auto *ptr_src = new Transaction;
-    if (not ptr_src->GetDate().IsValidDate())
+    if (not ptr_src->IsValidDate())
         isSuccess = false;
     if (not ptr_src->SetTRANSCODE(Transfer_OUT))
         isSuccess = false;
@@ -322,14 +322,8 @@ bool AccountManager::MakeInternalTransaction(int fromID, int toID, double amount
     }
 
 
-    auto *ptr_dst = new Transaction;
-    // Set date from src
-    if (not ptr_dst->GetDate().SetDay(ptr_src->GetDate().GetDay()))
-        isSuccess = false;
-    if (not ptr_dst->GetDate().SetMonth(ptr_src->GetDate().GetMonth()))
-        isSuccess = false;
-    if (not ptr_dst->GetDate().SetYear(ptr_src->GetDate().GetYear()))
-        isSuccess = false;
+    auto *ptr_dst = new Transaction(ptr_src);
+    // Date has been cloned from source transaction, it has already been verified successfully
     // fromID gives this date
     if (not ptr_dst->SetTRANSCODE(Transfer_IN))
         isSuccess = false;
@@ -399,7 +393,7 @@ bool AccountManager::Deposit(Account *account, double amount) {
     std::string fileName;
     auto tlist = account->GetTransactions();
     auto *ptr = new Transaction;
-    if (not ptr->GetDate().IsValidDate())
+    if (not ptr->IsValidDate())
         isSuccess = false;
     if (not ptr->SetTRANSCODE(Deposit_code))
         isSuccess = false;
@@ -453,7 +447,7 @@ bool AccountManager::Withdrawal(Account *account, double amount) {
         std::string fileName;
         auto tlist = account->GetTransactions();
         auto *ptr = new Transaction;
-        if (not ptr->GetDate().IsValidDate())
+        if (not ptr->IsValidDate())
             isSuccess = false;
         if (not ptr->SetTRANSCODE(Withdrawal_Code))
             isSuccess = false;
