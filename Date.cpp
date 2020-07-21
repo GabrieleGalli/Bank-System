@@ -53,8 +53,6 @@ bool Date::SetMonth (int month) {
 }
 
 bool Date::SetYear(int year) {
-    if (year > GetYear())
-        return false;
     _transInfo->Year = year;
     return true;
 }
